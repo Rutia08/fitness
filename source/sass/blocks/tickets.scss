@@ -1,0 +1,169 @@
+.tickets {
+  background: $color-ghost-white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    transform: translate(100px, 160px) rotate(-25deg);
+    width: 321px;
+    height: 384px;
+    background-image:
+      image-set(
+        "../img/tickets-background.webp" 1x,
+        "../img/tickets-background.png" 1x,
+        "../img/tickets-background@2x.webp" 2x,
+        "../img/tickets-background@2x.jpg" 2x
+      );
+  }
+}
+
+.tickets__wrapper {
+  padding: 30px clamp(20px, $padding-desktop, 103px);
+  margin: 0 auto;
+  max-width: 1366px;
+  position: relative;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
+    width: 23%;
+    height: 2px;
+    background: $color-grey;
+  }
+
+  input {
+    @include visually-hidden;
+  }
+
+  label {
+    position: relative;
+    display: inline-block;
+    padding: 15px 0;
+    margin: 0 23px;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgba(16, 38, 84, 0.5);
+  }
+
+  label:hover,
+  input:focus + label {
+    color: #102654;
+  }
+
+  label:hover::after,
+  input:focus + label::after,
+  input:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 2;
+    background: $color-crimson;
+  }
+
+  // input:checked + label {
+  //   border-color: $color-suva-grey;
+  //   border-bottom: 1px solid $color-default-white;
+  //   margin-bottom: -1px;
+  // }
+}
+
+.tickets__wrapper > input:first-child:checked ~ .tickets__panels > .tickets__panel:first-child,
+.tickets__wrapper > input:nth-child(3):checked ~ .tickets__panels > .tickets__panel:nth-child(2),
+.tickets__wrapper > input:nth-child(5):checked ~ .tickets__panels > .tickets__panel:nth-child(3),
+.tickets__wrapper > input:nth-child(7):checked ~ .tickets__panels > .tickets__panel:nth-child(4),
+.tickets__wrapper > input:nth-child(9):checked ~ .tickets__panels > .tickets__panel:nth-child(5),
+.tickets__wrapper > input:nth-child(11):checked ~ .tickets__panels > .tickets__panel:nth-child(6) {
+  display: grid;
+}
+
+.tickets__panel {
+  display: none;
+  padding: 30px 0;
+  grid-template-columns: repeat(3, $tickets-card-width-desktop);
+  gap: 40px;
+}
+
+.tickets__card {
+  margin: 0;
+  padding: 68px clamp(10px, $tickets-card-padding-desktop, 70px);
+  background-color: $color-default-white;
+  box-sizing: border-box;
+  border: 7px solid $color-default-white;
+
+  &:hover,
+  &:focus-within {
+    border: 7px solid transparent;
+    border-image: linear-gradient(148.82deg, $color-crimson 0.85%, $color-smalt 100%);
+    border-image-slice: 1;
+
+    button {
+      background: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
+      outline: none;
+      color: $color-default-white;
+    }
+  }
+
+  h2 {
+    margin: 0 0 22px 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 29px;
+    text-align: center;
+    color: $color-sapphire;
+  }
+
+  p {
+    margin: 0 0 95px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-chambray;
+    text-align: center;
+  }
+
+  span {
+    position: relative;
+    color: $color-sapphire;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 150%;
+
+    &::after {
+      content: attr(data-price);
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 150%;
+      position: relative;
+      color: $color-egyptian-blue;
+    }
+
+    &::before {
+      content: attr(data-price);
+      position: absolute;
+      bottom: -25px;
+      left: -25px;
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 150%;
+      color: $color-whisper;
+      opacity: 0.48;
+    }
+  }
+
+  button {
+    display: inline-flex;
+    vertical-align: baseline;
+  }
+}

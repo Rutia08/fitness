@@ -1,0 +1,161 @@
+.couches__wrapper {
+  padding: 120px clamp(20px, $padding-desktop, 103px) 105px;
+  margin: 0 auto;
+  max-width: 1366px;
+  position: relative;
+
+  // ul {
+  //   display: grid;
+  //   grid-template-columns: repeat(4, 1fr);
+  //   gap: 40px;
+  // }
+
+  h2 {
+    font-family: $font-alumni-sans-serif;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+    color: #102654;
+  }
+}
+
+.couches__slide {
+  width: clamp(100px, $couches-slide-width-desktop, 260px);
+  height: clamp(100px, $couches-slide-height-desktop, 294px);
+  color: $color-default-white;
+  padding: 30px;
+  background-color: $color-spindle;
+  display: flex;
+  align-items: flex-end;
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  .couches__text-hidden {
+    @include visually-hidden;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    color: $color-spindle;
+    text-align: center;
+  }
+
+  ul {
+    padding: 0 0 0 20px;
+  }
+
+  li {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $color-default-white;
+      position: absolute;
+      top: 8px;
+      left: -10px;
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    padding: 55px 35px 55px 55px;
+
+    .couches__text {
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .couches__picture::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $color-blue-transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    .couches__text-hidden {
+      @include visually-hidden-off;
+    }
+  }
+}
+
+.couches__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.couches__text {
+  position: relative;
+  z-index: 2;
+}
+
+.couches__button {
+  padding: 10px;
+  position: absolute;
+  width: 16px;
+  height: 32px;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  background: none;
+  display: block;
+
+  &::before {
+    content: "";
+    width: 22px;
+    height: 1px;
+    position: absolute;
+    background-color: $color-dark-gray;
+    left: -3px;
+    top: 23px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    width: 22px;
+    height: 1px;
+    position: absolute;
+    background-color: $color-dark-gray;
+    left: -3px;
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $color-midnight-express;
+    }
+  }
+
+  &--prev {
+    left: 47px;
+    bottom: 200px;
+  }
+
+  &--next {
+    right: 47px;
+    bottom: 200px;
+    transform: rotate(180deg);
+  }
+}

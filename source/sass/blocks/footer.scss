@@ -1,0 +1,10 @@
+.footer {
+  background-color: $color-black-russian;
+}
+
+.footer__wrapper {
+  padding: 30px clamp(30px, $padding-desktop, 103px) 51px;
+  margin: 0 auto;
+  max-width: 1366px;
+  color: $color-default-white;
+}

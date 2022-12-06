@@ -1,5 +1,5 @@
 .couches__wrapper {
-  padding: 120px clamp(20px, $padding-desktop, 103px) 105px;
+  padding: 120px clamp(20px, $padding-desktop-1, 47px) 105px;
   margin: 0 auto;
   max-width: 1366px;
   position: relative;
@@ -16,13 +16,18 @@
     font-size: 54px;
     line-height: 65px;
     letter-spacing: 0.03em;
-    color: #102654;
+    color: $color-sapphire;
   }
 }
 
+.couches__slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 .couches__slide {
-  width: clamp(100px, $couches-slide-width-desktop, 260px);
-  height: clamp(100px, $couches-slide-height-desktop, 294px);
+  aspect-ratio: 260/294;
   color: $color-default-white;
   padding: 30px;
   background-color: $color-spindle;
@@ -109,8 +114,8 @@
 }
 
 .couches__button {
-  padding: 10px;
-  position: absolute;
+  padding: 8px;
+  position: relative;
   width: 16px;
   height: 32px;
   cursor: pointer;
@@ -149,13 +154,11 @@
   }
 
   &--prev {
-    left: 47px;
-    bottom: 200px;
+    margin-right: 40px;
   }
 
   &--next {
-    right: 47px;
-    bottom: 200px;
+    margin-left: 40px;
     transform: rotate(180deg);
   }
 }

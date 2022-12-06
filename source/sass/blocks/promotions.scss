@@ -1,0 +1,112 @@
+.promotions__wrapper {
+  padding: 30px clamp(30px, $padding-desktop, 103px) 51px;
+  margin: 0 auto;
+  max-width: 1366px;
+
+  h2 {
+    font-family: $font-alumni-sans-serif;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+    color: $color-sapphire;
+    text-align: center;
+  }
+}
+
+.promotions__inner {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  gap: 40px;
+}
+
+.promotions__promo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $color-torch-red;
+}
+
+.promotions__text {
+  color: $color-default-white;
+  padding: 45px;
+
+  h3 {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 156%;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 156%;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    display: block;
+  }
+
+  a {
+    color: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color-default-white;
+  }
+}
+
+.promotions__picture {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 280 / 462;
+}
+
+.promotions__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.promotions__item {
+  padding: 35px;
+  box-sizing: border-box;
+  color: $color-resolution-blue;
+  border: 7px solid transparent;
+  border-image: linear-gradient(148.82deg, $color-crimson 0.85%, $color-smalt 100%);
+  border-image-slice: 1;
+
+  h3 {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 150%;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  a {
+    color: inherit;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color-resolution-blue;
+  }
+}

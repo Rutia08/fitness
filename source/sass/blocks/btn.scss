@@ -4,8 +4,7 @@
   padding: 10px 20px;
   color: $color-default-white;
   background-color: $color-transparent;
-  border: none;
-  outline: 4px solid $color-default-white;
+  border: 4px solid $color-default-white;
   cursor: pointer;
   user-select: none;
   transition: opacity $trans-default;
@@ -13,7 +12,6 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
-
   align-items: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -25,12 +23,10 @@
 
   &:hover {
     background: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
-    outline: none;
   }
 
   &--dark {
-    color: $color-sapphire;
-    outline: 2px solid $color-sapphire;
+    border: 2px solid $color-sapphire;
 
     &:hover {
       color: $color-default-white;

@@ -24,6 +24,8 @@
   font-size: 26px;
   line-height: 31px;
   letter-spacing: 0.03em;
+  position: relative;
+  z-index: 2;
 
   a {
     color: $color-default-white;
@@ -34,46 +36,61 @@
   }
 }
 
+.header__logo {
+  margin-top: 10px;
+}
+
 .header__promo {
-  margin: 0 0 -12px 0;
+  margin: -12px 0 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: $header-text-width-desktop 500px;
-  gap: 65px;
+  grid-template-columns: 397px $header-picture-width-desktop;
+  gap: 63px;
 }
 
 .header__text {
   padding: 111px 0 0 19px;
+  color: $color-default-white;
 
   p {
     text-align: right;
     margin: 0;
-    padding: 0 30px 20px 0;
+    padding: 0 51px 15px 0;
     font-family: $font-alumni-sans-serif;
     font-weight: 600;
     font-size: 48px;
     line-height: 58px;
     letter-spacing: 0.03em;
-    color: $color-default-white;
   }
 
-  .header__text-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 30px;
+  button {
+    margin: 0 -1px 0 144px;
+    padding: 20px 55px 19px;
   }
+}
+
+.header__text-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 265px;
+  margin-bottom: 48px;
 
   h1 {
     margin: 0;
-    padding: 0;
+    padding: 0 1px 0 0;
     font-family: $font-alumni-sans-serif;
+    font-style: normal;
     font-weight: 600;
     font-size: 92px;
     line-height: 110px;
     text-align: right;
     letter-spacing: 0.05em;
-    color: $color-default-white;
+    -webkit-text-stroke: 3px $color-default-white;
+    text-transform: uppercase;
+  }
+
+  ul {
+    margin: 0 0 36px 0;
+    align-self: end;
   }
 
   li {

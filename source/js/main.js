@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+
   // form
   let inputName = document.querySelector('[data-name-input]');
   let inputPhone = document.querySelector('[data-phone-input]');

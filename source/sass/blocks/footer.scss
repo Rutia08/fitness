@@ -3,8 +3,49 @@
 }
 
 .footer__wrapper {
-  padding: 30px clamp(30px, $padding-desktop, 103px) 51px;
+  padding: 30px clamp(30px, $padding-desktop, 103px) 41px;
   margin: 0 auto;
   max-width: 1366px;
   color: $color-default-white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer__logo {
+  justify-self: start;
+}
+
+.footer__nav {
+  justify-self: end;
+
+  &--2 {
+    justify-self: start;
+  }
+}
+
+.footer__list {
+  display: flex;
+
+  a {
+    color: $color-default-white;
+
+    &:hover {
+      color: $color-cobalt;
+    }
+  }
+
+  &--social {
+    margin-right: -6px;
+    justify-self: end;
+  }
+}
+
+.footer__list-item {
+  padding: 5px 10px;
+  margin: 0 10px;
+
+  &--social {
+    padding: 5px;
+    margin: 0 1px;
+  }
 }

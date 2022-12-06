@@ -1,10 +1,14 @@
 // Swiper 7.4.1
 import './vendor/swiper';
 import './vendor/focus-visible-polyfill';
+import './vendor/youtube-video';
 
 /* eslint-disable */
-
 // swiper couches
+
+const swiperPrev1 = document.querySelector('[data-swiper-1-prev]');
+const swiperNext1 = document.querySelector('[data-swiper-1-next]');
+
 const swiper1 = new Swiper('.swiper-1', {
   direction: 'horizontal',
   slidesPerView: 1,
@@ -21,9 +25,6 @@ const swiper1 = new Swiper('.swiper-1', {
   }
 });
 
-const swiperPrev1 = document.querySelector('[data-swiper-1-prev]');
-const swiperNext1 = document.querySelector('[data-swiper-1-next]');
-
 swiperPrev1.addEventListener('click', () => {
   swiper1.slidePrev();
 });
@@ -33,17 +34,18 @@ swiperNext1.addEventListener('click', () => {
 });
 
 // swiper reviews
-const swiper2 = new Swiper('.swiper-2', {
-  direction: 'horizontal',
-  slidesPerView: 1,
-});
 
 const swiperPrev2 = document.querySelector('[data-swiper-2-prev]');
 const swiperNext2 = document.querySelector('[data-swiper-2-next]');
 const slides2 = document.querySelectorAll('[data-slide-swiper-2]');
 
+const swiper2 = new Swiper('.swiper-2', {
+  direction: 'horizontal',
+  slidesPerView: 1,
+});
+
 if (swiper2.realIndex === 0) {
-  swiperPrev1.classList.add('disabled');
+  swiperPrev2.classList.add('disabled');
 };
 
 const buttonDisable2 = () => {
@@ -72,4 +74,20 @@ swiperPrev2.addEventListener('click', () => {
 swiperNext2.addEventListener('click', () => {
   swiper2.slideNext();
   buttonDisable2();
+});
+
+
+// youtube
+let gymVideo = document.querySelector('[data-gym-video]');
+let gymPoster = document.querySelector('[data-gym-poster]');
+let gymButton = document.querySelector('[data-gym-button]');
+let player = document.querySelector('[data-player]');
+
+gymVideo.classList.remove('no-js');
+player.classList.add('gym__hidden');
+
+gymButton.addEventListener('click', () => {
+  gymPoster.classList.add('gym__hidden');
+  player.classList.remove('gym__hidden');
+  player.play();
 });

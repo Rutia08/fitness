@@ -31,14 +31,14 @@
         </div>
         <div class="header__promo">
           <div class="header__text">
-            <p>Омск</p>
+            <p>омск</p>
             <div class="header__text-wrapper">
               <ul>
                 <li>Тренажёрный зал</li>
                 <li>Групповые занятия</li>
                 <li>Кардио-зона</li>
               </ul>
-              <h1>Фитнес центр</h1>
+              <h1>фитнес центр</h1>
             </div>
             <button class="btn">Купить абонемент</button>
           </div>
@@ -69,14 +69,20 @@
                 <img width="660" height="401" src="img/gym.jpg" srcset="img/gym@2x.jpg 2x" alt="Тренажерный зал.">
               </picture>
             </div>
-            <div class="gym__video">
-              <video width="364" controls id="video" preload="metadata" poster="img/poster.jpg">
-                <source src="blob:https://www.youtube.com/126ace77-0495-490b-b05b-c914a8b2c4ab" type="video/mp4">
-              </video>
-              <!-- <iframe width="364px" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw" title="Бесплатные интерактивные онлайн-курсы" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-            </div>
+            <div class="gym__video no-js" data-gym-video>
+              <div class="gym__poster" data-gym-poster>
+                <button  class="btn" data-gym-button>
+                  <img width="100" height="100" src="img/svg/play-button.svg" alt="Play.">
+                </button>
+                <picture>
+                  <source type="image/webp" srcset="img/poster.webp 1x, img/poster@2x.webp 2x">
+                  <img width="364" height="228" src="img/poster.jpg" srcset="img/poster@2x.jpg 2x" alt="Тренажерный зал.">
+                </picture>
+              </div>
+              <youtube-video class="gym__player" src="https://www.youtube.com/watch?v=9TZXsZItgdw" data-player></youtube-video>
           </div>
         </div>
+      </div>
       </section>
       <section class="tickets">
         <div class="tickets__wrapper">
@@ -109,7 +115,7 @@
                 <span>&#8381;</span>
                 <button class="btn btn--dark" type="button">купить абонемент</button>
               </li>
-           </ul>
+            </ul>
             <ul class="tickets__panel">
               <li class="tickets__card">
                 <h2>С тренером</h2>
@@ -191,191 +197,193 @@
       <section class="couches">
         <div class="couches__wrapper">
           <h2>Тренеры</h2>
-          <button class="couches__button couches__button--prev" data-swiper-1-prev></button>
-          <div class="swiper swiper-1">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
-                <div class="couches__picture">
-                  <picture>
-                    <source type="image/webp" srcset="img/couch-1.webp 1x, img/couch-1@2x.webp 2x">
-                    <img width="260" height="294" src="img/couch-1.jpg" srcset="img/couch-1@2x.jpg 2x" alt="Анна Павлова.">
-                  </picture>
-                </div>
-                <div class="couches__text">
-                  <h3>Анна Павлова</h3>
-                  <div class="couches__text-hidden">
-                    <p>CrossFit</p>
-                    <ul>
-                      <li>Certified Level 3 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт — 6 лет</li>
-                    </ul>
+          <div class="couches__slider">
+            <button class="couches__button couches__button--prev" data-swiper-1-prev></button>
+            <div class="swiper swiper-1">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
+                  <div class="couches__picture">
+                    <picture>
+                      <source type="image/webp" srcset="img/couch-1.webp 1x, img/couch-1@2x.webp 2x">
+                      <img width="260" height="294" src="img/couch-1.jpg" srcset="img/couch-1@2x.jpg 2x" alt="Анна Павлова.">
+                    </picture>
                   </div>
-                </div>
-              </li>
-              <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
-                <div class="couches__picture">
-                  <picture>
-                    <source type="image/webp" srcset="img/couch-2.webp 1x, img/couch-2@2x.webp 2x">
-                    <img width="260" height="294" src="img/couch-2.jpg" srcset="img/couch-2@2x.jpg 2x" alt="Алексей Лавров.">
-                  </picture>
-                </div>
-                <div class="couches__text">
-                  <h3>Алексей Лавров</h3>
-                  <div class="couches__text-hidden">
-                    <p>CrossFit</p>
-                    <ul>
-                      <li>Certified Level 3 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт — 6 лет</li>
+                  <div class="couches__text">
+                    <h3>Анна Павлова</h3>
+                    <div class="couches__text-hidden">
+                      <p>CrossFit</p>
+                      <ul>
+                        <li>Certified Level 3 Trainer</li>
+                        <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li>Опыт — 6 лет</li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
+                  <div class="couches__picture">
+                    <picture>
+                      <source type="image/webp" srcset="img/couch-2.webp 1x, img/couch-2@2x.webp 2x">
+                      <img width="260" height="294" src="img/couch-2.jpg" srcset="img/couch-2@2x.jpg 2x" alt="Алексей Лавров.">
+                    </picture>
+                  </div>
+                  <div class="couches__text">
+                    <h3>Алексей Лавров</h3>
+                    <div class="couches__text-hidden">
+                      <p>CrossFit</p>
+                      <ul>
+                        <li>Certified Level 3 Trainer</li>
+                        <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li>Опыт — 6 лет</li>
 
-                    </ul>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
-                <div class="couches__picture">
-                  <picture>
-                    <source type="image/webp" srcset="img/couch-3.webp 1x, img/couch-3@2x.webp 2x">
-                    <img width="260" height="294" src="img/couch-3.jpg" srcset="img/couch-3@2x.jpg 2x" alt="Александр Пашков.">
-                  </picture>
-                </div>
-                <div class="couches__text">
-                  <h3>Александр Пашков</h3>
-                  <div class="couches__text-hidden">
-                    <p>CrossFit</p>
-                    <ul>
-                      <li>Certified Level 3 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт — 6 лет</li>
+                </li>
+                <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
+                  <div class="couches__picture">
+                    <picture>
+                      <source type="image/webp" srcset="img/couch-3.webp 1x, img/couch-3@2x.webp 2x">
+                      <img width="260" height="294" src="img/couch-3.jpg" srcset="img/couch-3@2x.jpg 2x" alt="Александр Пашков.">
+                    </picture>
+                  </div>
+                  <div class="couches__text">
+                    <h3>Александр Пашков</h3>
+                    <div class="couches__text-hidden">
+                      <p>CrossFit</p>
+                      <ul>
+                        <li>Certified Level 3 Trainer</li>
+                        <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li>Опыт — 6 лет</li>
 
-                    </ul>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
-                <div class="couches__picture">
-                  <picture>
-                    <source type="image/webp" srcset="img/couch-4.webp 1x, img/couch-4@2x.webp 2x">
-                    <img width="260" height="294" src="img/couch-4.jpg" srcset="img/couch-4@2x.jpg 2x" alt="Мария Кетова.">
-                  </picture>
-                </div>
-                <div class="couches__text">
-                  <h3>Мария Кетова</h3>
-                  <div class="couches__text-hidden">
-                    <p>CrossFit</p>
-                    <ul>
-                      <li>Certified Level 3 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт — 6 лет</li>
+                </li>
+                <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
+                  <div class="couches__picture">
+                    <picture>
+                      <source type="image/webp" srcset="img/couch-4.webp 1x, img/couch-4@2x.webp 2x">
+                      <img width="260" height="294" src="img/couch-4.jpg" srcset="img/couch-4@2x.jpg 2x" alt="Мария Кетова.">
+                    </picture>
+                  </div>
+                  <div class="couches__text">
+                    <h3>Мария Кетова</h3>
+                    <div class="couches__text-hidden">
+                      <p>CrossFit</p>
+                      <ul>
+                        <li>Certified Level 3 Trainer</li>
+                        <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li>Опыт — 6 лет</li>
 
-                    </ul>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
-                <div class="couches__picture">
-                  <picture>
-                    <source type="image/webp" srcset="img/couch-1.webp 1x, img/couch-1@2x.webp 2x">
-                    <img width="260" height="294" src="img/couch-1.jpg" srcset="img/couch-1@2x.jpg 2x" alt="Анна Павлова-II.">
-                  </picture>
-                </div>
-                <div class="couches__text">
-                  <h3>Анна Павлова-II</h3>
-                  <div class="couches__text-hidden">
-                    <p>CrossFit</p>
-                    <ul>
-                      <li>Certified Level 3 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт — 6 лет</li>
+                </li>
+                <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
+                  <div class="couches__picture">
+                    <picture>
+                      <source type="image/webp" srcset="img/couch-1.webp 1x, img/couch-1@2x.webp 2x">
+                      <img width="260" height="294" src="img/couch-1.jpg" srcset="img/couch-1@2x.jpg 2x" alt="Анна Павлова-II.">
+                    </picture>
+                  </div>
+                  <div class="couches__text">
+                    <h3>Анна Павлова-II</h3>
+                    <div class="couches__text-hidden">
+                      <p>CrossFit</p>
+                      <ul>
+                        <li>Certified Level 3 Trainer</li>
+                        <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li>Опыт — 6 лет</li>
 
-                    </ul>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
-                <div class="couches__picture">
-                  <picture>
-                    <source type="image/webp" srcset="img/couch-2.webp 1x, img/couch-2@2x.webp 2x">
-                    <img width="260" height="294" src="img/couch-2.jpg" srcset="img/couch-2@2x.jpg 2x" alt="Алексей Лавров-II.">
-                  </picture>
-                </div>
-                <div class="couches__text">
-                  <h3>Алексей Лавров-II</h3>
-                  <div class="couches__text-hidden">
-                    <p>CrossFit</p>
-                    <ul>
-                      <li>Certified Level 3 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт — 6 лет</li>
+                </li>
+                <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
+                  <div class="couches__picture">
+                    <picture>
+                      <source type="image/webp" srcset="img/couch-2.webp 1x, img/couch-2@2x.webp 2x">
+                      <img width="260" height="294" src="img/couch-2.jpg" srcset="img/couch-2@2x.jpg 2x" alt="Алексей Лавров-II.">
+                    </picture>
+                  </div>
+                  <div class="couches__text">
+                    <h3>Алексей Лавров-II</h3>
+                    <div class="couches__text-hidden">
+                      <p>CrossFit</p>
+                      <ul>
+                        <li>Certified Level 3 Trainer</li>
+                        <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li>Опыт — 6 лет</li>
 
-                    </ul>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
-                <div class="couches__picture">
-                  <picture>
-                    <source type="image/webp" srcset="img/couch-3.webp 1x, img/couch-3@2x.webp 2x">
-                    <img width="260" height="294" src="img/couch-3.jpg" srcset="img/couch-3@2x.jpg 2x" alt="Александр Пашков-II.">
-                  </picture>
-                </div>
-                <div class="couches__text">
-                  <h3>Александр Пашков-II</h3>
-                  <div class="couches__text-hidden">
-                    <p>CrossFit</p>
-                    <ul>
-                      <li>Certified Level 3 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт — 6 лет</li>
+                </li>
+                <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
+                  <div class="couches__picture">
+                    <picture>
+                      <source type="image/webp" srcset="img/couch-3.webp 1x, img/couch-3@2x.webp 2x">
+                      <img width="260" height="294" src="img/couch-3.jpg" srcset="img/couch-3@2x.jpg 2x" alt="Александр Пашков-II.">
+                    </picture>
+                  </div>
+                  <div class="couches__text">
+                    <h3>Александр Пашков-II</h3>
+                    <div class="couches__text-hidden">
+                      <p>CrossFit</p>
+                      <ul>
+                        <li>Certified Level 3 Trainer</li>
+                        <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li>Опыт — 6 лет</li>
 
-                    </ul>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
-                <div class="couches__picture">
-                  <picture>
-                    <source type="image/webp" srcset="img/couch-4.webp 1x, img/couch-4@2x.webp 2x">
-                    <img width="260" height="294" src="img/couch-4.jpg" srcset="img/couch-4@2x.jpg 2x" alt="Мария Кетова-II.">
-                  </picture>
-                </div>
-                <div class="couches__text">
-                  <h3>Мария Кетова-II</h3>
-                  <div class="couches__text-hidden">
-                    <p>CrossFit</p>
-                    <ul>
-                      <li>Certified Level 3 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт — 6 лет</li>
+                </li>
+                <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
+                  <div class="couches__picture">
+                    <picture>
+                      <source type="image/webp" srcset="img/couch-4.webp 1x, img/couch-4@2x.webp 2x">
+                      <img width="260" height="294" src="img/couch-4.jpg" srcset="img/couch-4@2x.jpg 2x" alt="Мария Кетова-II.">
+                    </picture>
+                  </div>
+                  <div class="couches__text">
+                    <h3>Мария Кетова-II</h3>
+                    <div class="couches__text-hidden">
+                      <p>CrossFit</p>
+                      <ul>
+                        <li>Certified Level 3 Trainer</li>
+                        <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li>Опыт — 6 лет</li>
 
-                    </ul>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
-                <div class="couches__picture">
-                  <picture>
-                    <source type="image/webp" srcset="img/couch-4.webp 1x, img/couch-4@2x.webp 2x">
-                    <img width="260" height="294" src="img/couch-4.jpg" srcset="img/couch-4@2x.jpg 2x" alt="Мария Кетова-II.">
-                  </picture>
-                </div>
-                <div class="couches__text">
-                  <h3>Мария Кетова-II</h3>
-                  <div class="couches__text-hidden">
-                    <p>CrossFit</p>
-                    <ul>
-                      <li>Certified Level 3 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт — 6 лет</li>
+                </li>
+                <li class="swiper-slide couches__slide" tabindex="0" data-slide-swiper-1>
+                  <div class="couches__picture">
+                    <picture>
+                      <source type="image/webp" srcset="img/couch-4.webp 1x, img/couch-4@2x.webp 2x">
+                      <img width="260" height="294" src="img/couch-4.jpg" srcset="img/couch-4@2x.jpg 2x" alt="Мария Кетова-II.">
+                    </picture>
+                  </div>
+                  <div class="couches__text">
+                    <h3>Мария Кетова-II</h3>
+                    <div class="couches__text-hidden">
+                      <p>CrossFit</p>
+                      <ul>
+                        <li>Certified Level 3 Trainer</li>
+                        <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li>Опыт — 6 лет</li>
 
-                    </ul>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
+            <button class="couches__button couches__button--next" data-swiper-1-next></button>
           </div>
-          <button class="couches__button couches__button--next" data-swiper-1-next></button>
         </div>
       </section>
       <section class="advantages">
@@ -384,21 +392,21 @@
           <ul class="advantages__list">
             <li class="advantages__item">
               <div class="advantages__value">
+                <p>100</p>
+              </div>
+              <div class="advantages__description">
+                <h3>Тренажеров</h3>
+                <p>Современные тренажеры на&nbsp;все группы мышц</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__value">
                 <p>900</p>
                 <span>кв/м</span>
               </div>
-              <div class="advantages__deskription">
+              <div class="advantages__description">
                 <h3>Площадь</h3>
                 <p>Занимайтесь без очередей и&nbsp;толпучки</p>
-              </div>
-            </li>
-            <li class="advantages__item advantages__item--center">
-              <div class="advantages__value">
-                <p>100</p>
-              </div>
-              <div class="advantages__deskription">
-                <h3>Тренажеров</h3>
-                <p>Современные тренажеры на&nbsp;все группы мышц</p>
               </div>
             </li>
             <li class="advantages__item">
@@ -406,7 +414,7 @@
                 <p>70</p>
                 <span>машин</span>
               </div>
-              <div class="advantages__deskription">
+              <div class="advantages__description">
                 <h3>Собственная парковка</h3>
                 <p>Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</p>
               </div>
@@ -416,7 +424,7 @@
                 <p>350</p>
                 <span>мест</span>
               </div>
-              <div class="advantages__deskription">
+              <div class="advantages__description">
                 <h3>Комфорт</h3>
                 <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
               </div>
@@ -426,7 +434,7 @@
                 <p>5+</p>
                 <span>лет</span>
               </div>
-              <div class="advantages__deskription">
+              <div class="advantages__description">
                 <h3>Тренерский опыт</h3>
                 <p>Добивайтесь своих целей быстрее с профессиональным тренером</p>
               </div>
@@ -434,31 +442,31 @@
           </ul>
         </div>
       </section>
-      <section class="stocks">
-        <div class="stocks__wrapper">
+      <section class="promotions">
+        <div class="promotions__wrapper">
           <h2>Акции</h2>
-          <div class="stocks__inner">
-            <div class="stocks__promo promo">
-              <div class="promo__text">
+          <div class="promotions__inner">
+            <div class="promotions__promo">
+              <div class="promotions__text">
                 <h3>Год</h3>
                 <p>4999</p>
                 <span>Безлимитный абонемент в&nbsp;тренажерный зал</span>
                 <a href="#">подробнее</a>
               </div>
-              <div class="promo__picture">
+              <div class="promotions__picture">
                 <picture>
                   <source type="image/webp" srcset="img/promo.webp 1x, img/promo@2x.webp 2x">
                   <img width="280" height="462" src="img/promo.jpg" srcset="img/promo@2x.jpg 2x" alt="Спортсменка.">
                 </picture>
               </div>
             </div>
-            <ul class="stocks__list">
-              <li class="stocks__item">
+            <ul class="promotions__list">
+              <li class="promotions__item">
                 <h3>Месяц бесплатно</h3>
                 <p>Приведи друга, получи абонемент в&nbsp;подарок</p>
                 <a href="#">подробнее</a>
               </li>
-              <li class="stocks__item">
+              <li class="promotions__item">
                 <h3>Скидка 20%</h3>
                 <p>Корпоративный фитнес с&nbsp;командой</p>
                 <a href="#">подробнее</a>

@@ -1,44 +1,76 @@
 .gym__wrapper {
-  padding: 30px clamp(20px, $padding-desktop, 103px);
+  padding: 120px clamp(20px, $padding-desktop, 103px);
   margin: 0 auto;
   max-width: 1366px;
   display: grid;
-  grid-template-columns: $gym-text-width-desktop $gym-media-width-desktop;
+  grid-template-columns: 415px 1fr;
   gap: $gym-gap;
+
+  @include vp-1199 {
+    padding: 101px clamp(10px, $padding-tablet, 45px) 100px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .gym__text {
-  padding: 49px 0 0 60px;
+  padding: 39px 0 0 60px;
   color: $color-sapphire;
 
+  @include vp-1199 {
+    padding: 0;
+  }
+
   h2 {
-    margin: 0 0 25px 0;
+    margin: 0 0 7px 0;
     padding: 0;
     font-family: $font-alumni-sans-serif;
     font-weight: 600;
     font-size: 48px;
     line-height: 58px;
     letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      margin: 0;
+      text-align: center;
+      font-size: 42px;
+      line-height: 50px;
+    }
   }
 
   h3 {
-    margin: 0 0 55px 0;
+    margin: 0 0 39px 0;
     padding: 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
+
+    @include vp-1199 {
+      margin: 0 0 33px 0;
+      text-align: center;
+      font-size: 18px;
+      line-height: 150%;
+    }
   }
 
   p {
+    margin: 0 0 10px 0;
+    padding: 0;
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
-  }
-}
 
-.gym__additional {
-  @include vp-1199 {
-    @include visually-hidden;
+    @include vp-1199 {
+      margin: 0 0 43px 0;
+      padding: 0 88px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 150%;
+
+      & ~ p {
+        display: none;
+      }
+    }
   }
 }
 
@@ -46,14 +78,41 @@
   position: relative;
 }
 
+.gym__picture {
+  img {
+    @include vp-1199 {
+      aspect-ratio: 678 / 345;
+      width: 100%;
+    }
+  }
+}
+
+
 .gym__video {
-  margin: -114px 0 0 -63px;
+  margin: -113px 0 0 -63px;
   width: $gym-video-width-desktop;
   aspect-ratio: 364/228;
+
+  @include vp-1199 {
+    margin: -84px auto 0;
+    aspect-ratio: 364/228;
+    width: 266px;
+  }
 }
 
 .gym__poster {
   position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 54, 122, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   img {
     width: 100%;

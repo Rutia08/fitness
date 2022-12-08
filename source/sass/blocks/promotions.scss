@@ -1,9 +1,11 @@
 .promotions__wrapper {
-  padding: 30px clamp(30px, $padding-desktop, 103px) 51px;
+  padding: 150px clamp(30px, $padding-desktop, 103px) 60px;
   margin: 0 auto;
   max-width: 1366px;
 
   h2 {
+    margin: 0 0 33px 0;
+    padding: 0;
     font-family: $font-alumni-sans-serif;
     font-weight: 600;
     font-size: 54px;
@@ -28,7 +30,9 @@
 
 .promotions__text {
   color: $color-default-white;
-  padding: 45px;
+  padding: 34px 45px 45px;
+  display: flex;
+  flex-direction: column;
 
   h3 {
     padding: 0;
@@ -40,17 +44,18 @@
 
   p {
     padding: 0;
-    margin: 0;
+    margin: -6px 0 19px 0;
     font-weight: 700;
     font-size: 70px;
-    line-height: 156%;
+    line-height: 100%;
   }
 
   span {
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
-    display: block;
+    display: flex;
+    flex: auto;
   }
 
   a {
@@ -60,7 +65,8 @@
     line-height: 16px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    border-bottom: 1px solid $color-default-white;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 }
 
@@ -77,16 +83,18 @@
 }
 
 .promotions__item {
-  padding: 35px;
+  padding: 18px 28px 29px;
   box-sizing: border-box;
   color: $color-resolution-blue;
   border: 7px solid transparent;
   border-image: linear-gradient(148.82deg, $color-crimson 0.85%, $color-smalt 100%);
   border-image-slice: 1;
+  display: flex;
+  flex-direction: column;
 
   h3 {
     padding: 0;
-    margin: 0;
+    margin: 0 0 3px 0;
     font-weight: 700;
     font-size: 26px;
     line-height: 150%;
@@ -98,6 +106,8 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
+    display: flex;
+    flex: auto;
   }
 
   a {
@@ -107,6 +117,7 @@
     line-height: 14px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    border-bottom: 1px solid $color-resolution-blue;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 }

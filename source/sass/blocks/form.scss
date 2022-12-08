@@ -4,10 +4,10 @@
 }
 
 .form__wrapper {
-  padding: 56px clamp(30px, $padding-desktop-3, 170px) 70px clamp(30px, $padding-desktop-4, 103px);
+  padding: 56px clamp(30px, $padding-desktop-3, 170px) 69px clamp(30px, $padding-desktop-4, 103px);
 
   h2 {
-    margin: 0;
+    margin: 0 0 14px 0;
     padding: 0;
     font-family: $font-alumni-sans-serif;
     font-weight: 800;
@@ -19,8 +19,12 @@
   button {
     width: 100%;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 28px;
     grid-column: 1 / -1;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
   }
 
   form {
@@ -29,15 +33,8 @@
     column-gap: 30px;
   }
 
-  @keyframes autofill {
-    0%,
-    100% {
-      background: transparent;
-    }
-  }
-
   input {
-    padding: 12px 0;
+    padding: 6px 0;
     width: 100%;
     box-sizing: border-box;
     border: none;

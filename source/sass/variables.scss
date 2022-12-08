@@ -83,7 +83,9 @@ $padding-desktop-2: percentage(calc(347 / 1366));
 $padding-desktop-3: percentage(calc(170 / 683));
 $padding-desktop-4: percentage(calc(103 / 683));
 $padding-desktop-5: percentage(calc(120 / 683));
-$padding-desktop-6: percentage(calc(160 / 683));
+$padding-desktop-6: percentage(calc(103 / 683));
+
+$padding-tablet: percentage(calc(45 / 768));
 
 $header-picture-width-desktop: percentage(calc(500 / 1160));
 $gym-gap: percentage(calc(85 / 1160));
@@ -93,12 +95,12 @@ $gym-video-width-desktop: percentage(calc(364 / 660));
 
 
 $tickets-card-width-desktop: percentage(calc(360 / 1160));
-$tickets-card-padding-desktop: percentage(calc(77 / 360));
+$tickets-card-padding-desktop: percentage(calc(68 / 360));
 $games-header-width-desktop: percentage(calc(231 / 500));
 
 $slider-width-desktop: 1160;
 $couches-slider-width-desktop: percentage(calc(1160 / 1366));
-$contacts-gap: percentage(calc(120 / 683));
+$contacts-gap: percentage(calc(100 / 460));
 
 // $padding-desktop-3: percentage(calc(143 / 1366));
 // $padding-tablet: percentage(calc(45 / 768));

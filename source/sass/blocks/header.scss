@@ -1,5 +1,9 @@
 .header {
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, $color-venetian-red -46.69deg, $color-dark-cerulean 32.24deg, $color-venetian-red 313.31deg, $color-dark-cerulean 392.24deg);
+
+  @include vp-1199 {
+    background: conic-gradient(from 139.4deg at 20.7% 35.74%, $color-venetian-red -46.69deg, $color-dark-cerulean 32.24deg, $color-venetian-red 313.31deg, $color-dark-cerulean 392.24deg);
+  }
 }
 
 .header__wrapper {
@@ -7,9 +11,9 @@
   margin: 0 auto;
   max-width: 1366px;
 
-  // @include vp-1023 {
-  //   padding: 30px clamp(10px, $padding-tablet, 45px) 275px;
-  // }
+  @include vp-1199 {
+    padding: 34px clamp(10px, $padding-tablet, 45px) 82px;
+  }
 
   // @include vp-767 {
   //   padding: 20px clamp(15px, $padding-mobile, 30px) 10px;
@@ -19,25 +23,37 @@
 .header__menu {
   display: flex;
   justify-content: space-between;
-  font-family: $font-alumni-sans-serif;
-  font-weight: 600;
-  font-size: 26px;
-  line-height: 31px;
-  letter-spacing: 0.03em;
   position: relative;
   z-index: 2;
 
   a {
     color: $color-default-white;
+    font-family: $font-alumni-sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
 
     &:hover {
       color: $color-sapphire;
+    }
+
+    @include vp-1199 {
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.02em;
     }
   }
 }
 
 .header__logo {
   margin-top: 10px;
+
+  @include vp-1199 {
+    margin-top: 5px;
+    width: 82px;
+    height: 17px;
+  }
 }
 
 .header__promo {
@@ -46,11 +62,24 @@
   display: grid;
   grid-template-columns: 397px $header-picture-width-desktop;
   gap: 63px;
+
+  @include vp-1199 {
+    margin: 19px 0 0 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 }
 
 .header__text {
   padding: 111px 0 0 19px;
   color: $color-default-white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include vp-1199 {
+    padding: 49px 0 0 0;
+  }
 
   p {
     text-align: right;
@@ -61,11 +90,22 @@
     font-size: 48px;
     line-height: 58px;
     letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      font-size: 34px;
+      line-height: 41px;
+      padding: 0 3px 8px 0;
+    }
   }
 
   button {
-    margin: 0 -1px 0 144px;
+    display: block;
+    margin: 0;
     padding: 20px 55px 19px;
+
+    @include vp-1199 {
+      padding: 20px 30px 19px;
+    }
   }
 }
 
@@ -74,11 +114,15 @@
   grid-template-columns: 1fr 265px;
   margin-bottom: 48px;
 
+  @include vp-1199 {
+    grid-template-columns: 1fr 210px;
+    margin-bottom: 36px;
+  }
+
   h1 {
     margin: 0;
     padding: 0 1px 0 0;
     font-family: $font-alumni-sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 92px;
     line-height: 110px;
@@ -86,11 +130,21 @@
     letter-spacing: 0.05em;
     -webkit-text-stroke: 3px $color-default-white;
     text-transform: uppercase;
+
+    @include vp-1199 {
+      font-size: 72px;
+      line-height: 86px;
+      text-transform: none;
+    }
   }
 
   ul {
     margin: 0 0 36px 0;
     align-self: end;
+
+    @include vp-1199 {
+      margin: 0 0 20px 0;
+    }
   }
 
   li {
@@ -98,5 +152,13 @@
     font-size: 14px;
     line-height: 150%;
     text-align: right;
+  }
+}
+
+.header__picture {
+  @include vp-1199 {
+    img {
+      aspect-ratio: 324/390;
+    }
   }
 }

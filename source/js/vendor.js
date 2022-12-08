@@ -34,7 +34,6 @@ swiperNext1.addEventListener('click', () => {
 });
 
 // swiper reviews
-
 const swiperPrev2 = document.querySelector('[data-swiper-2-prev]');
 const swiperNext2 = document.querySelector('[data-swiper-2-next]');
 const slides2 = document.querySelectorAll('[data-slide-swiper-2]');
@@ -80,7 +79,7 @@ swiperNext2.addEventListener('click', () => {
 // youtube
 let gymVideo = document.querySelector('[data-gym-video]');
 let gymPoster = document.querySelector('[data-gym-poster]');
-let gymButton = document.querySelector('[data-gym-button]');
+  let gymButton = document.querySelector('[data-gym-button]');
 let player = document.querySelector('[data-player]');
 
 gymVideo.classList.remove('no-js');

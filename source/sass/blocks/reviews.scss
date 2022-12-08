@@ -1,5 +1,5 @@
 .reviews__wrapper {
-  padding: 120px clamp(20px, $padding-desktop-2, 347px) 121px;
+  padding: 57px clamp(20px, $padding-desktop-2, 347px) 120px;
   margin: 0 auto;
   max-width: 1366px;
   position: relative;
@@ -11,7 +11,7 @@
   // }
 
   h2 {
-    margin: 0;
+    margin: 0 0 37px 0;
     padding: 0;
     font-family: $font-alumni-sans-serif;
     font-weight: 600;
@@ -31,15 +31,16 @@
 .reviews__slide {
   aspect-ratio: 560/242;
   margin: 0;
-  padding: 62px;
+  padding: 54px 62px;
   display: grid;
   grid-template-columns: 80px 1fr;
   gap: 28px;
   background: $color-resolution-blue;
   color: $color-default-white;
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 
   h3 {
-    margin: 0 0 25px 0;
+    margin: 0 0 12px 0;
     padding: 0;
     font-weight: 700;
     font-size: 20px;
@@ -56,6 +57,8 @@
 }
 
 .reviews__picture {
+  margin-top: 8px;
+
   img {
     width: 80px;
     height: 80px;
@@ -102,12 +105,12 @@
   }
 
   &--prev {
-    margin-right: 40px;
+    margin-right: 42px;
   }
 
   &--next {
     transform: rotate(180deg);
-    margin-left: 40px;
+    margin-left: 42px;
   }
 }
 

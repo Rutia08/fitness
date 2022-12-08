@@ -1,5 +1,5 @@
 .couches__wrapper {
-  padding: 120px clamp(20px, $padding-desktop-1, 47px) 105px;
+  padding: 53px clamp(20px, $padding-desktop-1, 47px) 91px;
   margin: 0 auto;
   max-width: 1366px;
   position: relative;
@@ -11,6 +11,8 @@
   // }
 
   h2 {
+    margin: 0 58px 48px;
+    padding: 0;
     font-family: $font-alumni-sans-serif;
     font-weight: 600;
     font-size: 54px;
@@ -29,7 +31,7 @@
 .couches__slide {
   aspect-ratio: 260/294;
   color: $color-default-white;
-  padding: 30px;
+  padding: 22px;
   background-color: $color-spindle;
   display: flex;
   align-items: flex-end;
@@ -42,6 +44,11 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 150%;
+    text-align: center;
+  }
+
+  .couches__text {
+    width: 100%;
   }
 
   .couches__text-hidden {
@@ -50,17 +57,21 @@
 
   p {
     padding: 0;
-    margin: 0;
+    margin: -4px 0 33px 0;
     color: $color-spindle;
     text-align: center;
   }
 
   ul {
-    padding: 0 0 0 20px;
+    padding: 0 0 0 36px;
   }
 
   li {
+    margin-bottom: 13px;
     position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
 
     &::before {
       content: "";
@@ -69,14 +80,19 @@
       border-radius: 50%;
       background-color: $color-default-white;
       position: absolute;
-      top: 8px;
-      left: -10px;
+      top: 7px;
+      left: -16px;
     }
   }
 
   &:hover,
   &:focus-within {
-    padding: 55px 35px 55px 55px;
+    padding: 52px 36px 15px 35px;
+    box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+
+    img {
+      transform: scale(-1, 1);
+    }
 
     .couches__text {
       height: 100%;

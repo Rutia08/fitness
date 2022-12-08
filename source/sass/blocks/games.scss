@@ -1,5 +1,5 @@
 .games__wrapper {
-  padding: 120px clamp(20px, $padding-desktop, 103px) 105px;
+  padding: 120px clamp(20px, $padding-desktop, 103px) 53px;
   margin: 0 auto;
   max-width: 1366px;
   position: relative;
@@ -10,18 +10,39 @@
 .games__text {
   background-color: $color-torch-red;
   color: $color-default-white;
-  padding: 85px 79px 85px 78px;
+  padding: 81px 79px 85px 78px;
+
+  p {
+    margin: 0 0 50px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    border: none;
+    outline: 3px  solid $color-default-white;
+    padding: 25px 10px;
+
+    &:hover {
+      background: $color-sapphire;
+    }
+  }
 }
 
 .games__header {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 50px;
-  margin: 0 0 35px 0;
+  margin: 0 0 11px 0;
 
   h2 {
     padding: 0;
-    margin: 0;
+    margin: 5px 0 0 0;
     font-family: $font-alumni-sans-serif;
     font-weight: 600;
     font-size: 82px;
@@ -51,7 +72,7 @@
   grid-template-columns: min-content min-content;
   gap: 7px;
   position: relative;
-  margin: 0 30px 0 0;
+  margin: 0 30px 6px 0;
 
   &::before {
     content: "";
@@ -68,7 +89,7 @@
     padding: 0;
     font-weight: 400;
     font-size: 14px;
-    line-height: 150%;
+    line-height: 140%;
     align-self: center;
   }
 }

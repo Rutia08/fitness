@@ -1,7 +1,6 @@
 // Swiper 7.4.1
 import './vendor/swiper';
 import './vendor/focus-visible-polyfill';
-import './vendor/youtube-video';
 
 /* eslint-disable */
 // swiper couches
@@ -21,8 +20,8 @@ const swiper1 = new Swiper('.swiper-1', {
     1200: {
       slidesPerView: 4,
       spaceBetween: 40,
-    }
-  }
+    },
+  },
 });
 
 swiperPrev1.addEventListener('click', () => {
@@ -45,23 +44,23 @@ const swiper2 = new Swiper('.swiper-2', {
 
 if (swiper2.realIndex === 0) {
   swiperPrev2.classList.add('disabled');
-};
+}
 
 const buttonDisable2 = () => {
   if (swiper2.realIndex === 0) {
     swiperPrev2.classList.add('disabled');
   } else {
     swiperPrev2.classList.remove('disabled');
-  };
+  }
 
   if ((swiper2.realIndex >= slides2.length / 2)) {
     swiperNext2.classList.add('disabled');
   } else {
     swiperNext2.classList.remove('disabled');
-  };
+  }
 };
 
-swiper2.on('transitionEnd', function() {
+swiper2.on('transitionEnd', () => {
   buttonDisable2();
 });
 
@@ -78,15 +77,32 @@ swiperNext2.addEventListener('click', () => {
 
 // youtube
 let gymVideo = document.querySelector('[data-gym-video]');
-let gymPoster = document.querySelector('[data-gym-poster]');
-  let gymButton = document.querySelector('[data-gym-button]');
-let player = document.querySelector('[data-player]');
+let gymLink = document.querySelector('[data-gym-link]');
+let button = document.querySelector('[data-gym-button]');
+let url = gymVideo.getAttribute('data-video-url');
 
-gymVideo.classList.remove('no-js');
-player.classList.add('gym__hidden');
+gymLink.removeAttribute('href');
 
-gymButton.addEventListener('click', () => {
-  gymPoster.classList.add('gym__hidden');
-  player.classList.remove('gym__hidden');
-  player.play();
+let videoId = /^https?\:\/\/(www\.)?youtu\.be/.test(url) ? url.replace(/^https?\:\/\/(www\.)?youtu\.be\/([\w-]{11}).*/, '$2') : url.replace(/.*\?v\=([\w-]{11}).*/, '$1');
+
+function createIfrarme(str) {
+  let iframe = document.createElement('iframe');
+  iframe.setAttribute('src', genereateURL(str));
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('allow', 'autoplay');
+  return iframe;
+}
+
+gymVideo.addEventListener('click', () => {
+  let iframe = createIfrarme(videoId);
+  gymLink.remove();
+  button.remove();
+  gymVideo.appendChild(iframe);
 });
+
+function genereateURL(id) {
+  const query = '?rel=0showinfo=0&autoplay=1';
+  // console.log('https://www.youtube.com/embed/' + videoId + query);
+  return 'https://www.youtube.com/embed/' + id + query;
+}

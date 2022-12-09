@@ -67,18 +67,17 @@
                 <img width="660" height="401" src="img/gym.jpg" srcset="img/gym@2x.jpg 2x" alt="Тренажерный зал.">
               </picture>
             </div>
-            <div class="gym__video no-js" data-gym-video>
-              <div class="gym__poster" data-gym-poster>
-                <button  class="btn" data-gym-button>
-                  <img width="100" height="100" src="img/svg/play-button.svg" alt="Play.">
-                </button>
+            <div class="gym__video" data-gym-video data-video-url="https://www.youtube.com/watch?v=9TZXsZItgdw">
+              <a href="https://www.youtube.com/watch?v=9TZXsZItgdw" class="gym__link" data-gym-link>
                 <picture>
                   <source type="image/webp" srcset="img/poster.webp 1x, img/poster@2x.webp 2x">
                   <img width="364" height="228" src="img/poster.jpg" srcset="img/poster@2x.jpg 2x" alt="Тренажерный зал.">
                 </picture>
-              </div>
-              <youtube-video class="gym__player" src="https://www.youtube.com/watch?v=9TZXsZItgdw" autoplay controls data-player></youtube-video>
-          </div>
+                <button class="btn" data-gym-button area-label="Запустить видео">
+                  <img width="100" height="100" src="img/svg/play-button.svg" alt="Play.">
+                </button>
+              </a>
+            </div>
         </div>
       </div>
       </section>

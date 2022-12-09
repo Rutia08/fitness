@@ -18,12 +18,15 @@
 
 .footer__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-left: -20px;
+  max-width: 950px;
 
   &--social {
     margin-right: -6px;
     justify-self: end;
+    max-width: 150px;
 
     @include vp-1199 {
       margin: 4px -14px 0 0;
@@ -58,7 +61,8 @@
   }
 
   &--logo {
-    margin: 10px 250px 0 0;
+    margin: 10px 250px 0 10px;
+    min-width: 110px;
 
     @include vp-1199 {
       margin: 0 40px 0 9px;

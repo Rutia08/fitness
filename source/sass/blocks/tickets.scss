@@ -5,7 +5,7 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: -95px;
+    bottom: -99px;
     right: -108px;
     transform: rotate(-30deg);
     width: 321px;
@@ -68,7 +68,7 @@
     left: 50%;
     transform: translateX(-50%);
     top: 58px;
-    width: 150px;
+    width: 350px;
     height: 2px;
     background: $color-grey;
 
@@ -85,7 +85,7 @@
     position: relative;
     display: inline-block;
     padding: 17px 0 13px;
-    margin: 0 23px;
+    margin: 0 21px;
     cursor: pointer;
     color: rgba(16, 38, 84, 0.5);
     font-weight: 400;
@@ -230,7 +230,7 @@
     width: 100%;
     justify-content: center;
     margin-top: 34px;
-    padding: 24px 0;
+    padding: 26px 0;
     color: $color-sapphire;
     border: none;
     outline: 2px solid $color-sapphire;

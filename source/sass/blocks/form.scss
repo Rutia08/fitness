@@ -6,6 +6,11 @@
 .form__wrapper {
   padding: 56px clamp(30px, $padding-desktop-3, 170px) 69px clamp(30px, $padding-desktop-4, 103px);
 
+  @include vp-1199 {
+    padding: 62px clamp(133px, $feedback-padding-tablet, 250px) 67px;
+    margin: 0 30px 0 0;
+  }
+
   h2 {
     margin: 0 0 14px 0;
     padding: 0;
@@ -14,6 +19,13 @@
     font-size: 54px;
     line-height: 156%;
     letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 50px;
+      margin: 0 0 30px 0;
+    }
   }
 
   button {
@@ -25,12 +37,21 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
+
+    @include vp-1199 {
+      margin-top: 28px;
+      padding: 16px;
+    }
   }
 
   form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
+
+    @include vp-1199 {
+      column-gap: 60px;
+    }
   }
 
   input {
@@ -48,6 +69,7 @@
       font-size: 14px;
       line-height: 16px;
       background: none;
+      color: $color-default-white;
     }
 
     &:-webkit-autofill {

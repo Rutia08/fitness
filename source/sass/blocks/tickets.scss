@@ -17,6 +17,14 @@
         "../img/tickets-background@2x.webp" 2x,
         "../img/tickets-background@2x.jpg" 2x
       );
+
+    @include vp-1199 {
+      width: 289px;
+      height: 345px;
+      bottom: -75px;
+      right: -9px;
+      background-size: 289px;
+    }
   }
 }
 
@@ -44,6 +52,7 @@
     letter-spacing: 0.03em;
 
     @include vp-1199 {
+      margin-right: 10px;
       font-size: 42px;
       line-height: 50px;
     }
@@ -90,9 +99,13 @@
     }
   }
 
+  input:checked + label {
+    color: $color-sapphire;
+  }
+
   label:hover,
   input:focus + label {
-    color: #102654;
+    color: $color-torch-red;
   }
 
   input:focus + label::after,
@@ -121,7 +134,7 @@
   margin: 38px 0 0 0;
 
   @include vp-1199 {
-    margin: 47px 0 0 0;
+    margin: 44px 0 0 0;
   }
 }
 
@@ -143,6 +156,11 @@
   background-color: $color-default-white;
   box-sizing: border-box;
   border: 7px solid transparent;
+
+  @include vp-1199 {
+    padding: 56px 112px 62px;
+    grid-template-columns: 1fr;
+  }
 
   &:hover,
   &:focus-within {
@@ -216,5 +234,9 @@
     color: $color-sapphire;
     border: none;
     outline: 2px solid $color-sapphire;
+
+    @include vp-1199 {
+      margin-top: 36px;
+    }
   }
 }

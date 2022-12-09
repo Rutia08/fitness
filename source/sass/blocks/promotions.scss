@@ -3,6 +3,10 @@
   margin: 0 auto;
   max-width: 1366px;
 
+  @include vp-1199 {
+    padding: 92px clamp(10px, $padding-tablet, 45px) 50px;
+  }
+
   h2 {
     margin: 0 0 33px 0;
     padding: 0;
@@ -13,6 +17,12 @@
     letter-spacing: 0.03em;
     color: $color-sapphire;
     text-align: center;
+
+    @include vp-1199 {
+      margin: 0 10px 39px 0;
+      font-size: 42px;
+      line-height: 50px;
+    }
   }
 }
 
@@ -20,12 +30,21 @@
   display: grid;
   grid-template-columns: 560px 1fr;
   gap: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
 
 .promotions__promo {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: $color-torch-red;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr $promo-picture-tablet;
+  }
 }
 
 .promotions__text {
@@ -33,6 +52,7 @@
   padding: 34px 45px 45px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
   h3 {
     padding: 0;
@@ -67,6 +87,10 @@
     text-transform: uppercase;
     text-decoration: underline;
     text-underline-offset: 3px;
+
+    &:hover {
+      color: $color-sapphire;
+    }
   }
 }
 
@@ -74,12 +98,29 @@
   width: 100%;
   height: auto;
   aspect-ratio: 280 / 462;
+
+  @include vp-1199 {
+    aspect-ratio: 399 / 462;
+  }
+
+  img {
+    aspect-ratio: 280 / 462;
+
+    @include vp-1199 {
+      aspect-ratio: 399 / 462;
+    }
+  }
 }
 
 .promotions__list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 }
 
 .promotions__item {
@@ -91,6 +132,11 @@
   border-image-slice: 1;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+
+  @include vp-1199 {
+    min-height: 211px;
+  }
 
   h3 {
     padding: 0;
@@ -119,5 +165,9 @@
     text-transform: uppercase;
     text-decoration: underline;
     text-underline-offset: 3px;
+
+    &:hover {
+      color: $color-torch-red;
+    }
   }
 }

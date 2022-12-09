@@ -9,6 +9,10 @@
   color: $color-default-white;
   display: flex;
   justify-content: space-between;
+
+  @include vp-1199 {
+    padding: 35px clamp(10px, $padding-tablet, 45px) 50px;
+  }
 }
 
 
@@ -20,11 +24,19 @@
   &--social {
     margin-right: -6px;
     justify-self: end;
+
+    @include vp-1199 {
+      margin: 4px -14px 0 0;
+    }
   }
 }
 
 .footer__list-item {
   margin: 0 10px;
+
+  @include vp-1199 {
+    margin: 0 5px;
+  }
 
   a {
     padding: 10px;
@@ -38,9 +50,19 @@
     }
   }
 
+  img {
+    @include vp-1199 {
+      width: 82px;
+      height: 18px;
+    }
+  }
+
   &--logo {
-    margin-right: 250px;
-    margin-top: 10px;
+    margin: 10px 250px 0 0;
+
+    @include vp-1199 {
+      margin: 0 40px 0 9px;
+    }
 
     a {
       display: block;
@@ -49,6 +71,10 @@
 
   &--social {
     margin: 0;
+
+    @include vp-1199 {
+      margin: 0;
+    }
 
     a {
       display: block;

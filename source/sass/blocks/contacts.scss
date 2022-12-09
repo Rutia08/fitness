@@ -7,6 +7,10 @@
 .contacts__wrapper {
   padding: 47px clamp(30px, $padding-desktop-6, 103px) 60px clamp(30px, $padding-desktop-5, 120px);
 
+  @include vp-1199 {
+    padding: 62px clamp(103px, $feedback-padding-tablet-2, 250px) 63px clamp(133px, $feedback-padding-tablet, 250px);
+  }
+
   h2 {
     margin: 0 0 25px 0;
     padding: 0;
@@ -15,6 +19,12 @@
     font-size: 54px;
     line-height: 156%;
     letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      margin: 0 0 31px 0;
+    }
   }
 }
 
@@ -24,6 +34,11 @@
   column-gap: $contacts-gap;
   row-gap: 17px;
   position: relative;
+
+  @include vp-1199 {
+    column-gap: 93px;
+    row-gap: 20px;
+  }
 
   &::before {
     content: "";
@@ -35,16 +50,28 @@
     left: 50%;
     top: 50%;
     transform: translate(4px, -50%);
+
+    @include vp-1199 {
+      transform: translate(0, -50%);
+    }
   }
 }
 
 .contacts__item {
   &:nth-child(2n+1) {
     padding-left: 4px;
+
+    @include vp-1199 {
+      padding-left: 0;
+    }
   }
 
   &:nth-child(2n) {
     padding-left: 14px;
+
+    @include vp-1199 {
+      padding-left: 0;
+    }
   }
 
   h3 {
@@ -53,6 +80,11 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
+
+    @include vp-1199 {
+      margin: 0 0 5px 0;
+      font-size: 20px;
+    }
   }
 
   p {
@@ -61,5 +93,16 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+
+    @include vp-1199 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $color-torch-red;
+    }
   }
 }

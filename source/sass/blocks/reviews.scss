@@ -10,6 +10,10 @@
   //   gap: 40px;
   // }
 
+  @include vp-1199 {
+    padding: 42px clamp(10px, $padding-tablet, 45px) 100px;
+  }
+
   h2 {
     margin: 0 0 37px 0;
     padding: 0;
@@ -20,6 +24,12 @@
     letter-spacing: 0.03em;
     color: #102654;
     text-align: center;
+
+    @include vp-1199 {
+      margin: 0 0 40px 0;
+      font-size: 42px;
+      line-height: 50px;
+    }
   }
 }
 
@@ -38,6 +48,11 @@
   background: $color-resolution-blue;
   color: $color-default-white;
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+
+  @include vp-1199 {
+    aspect-ratio: 566/242;
+    padding: 54px 65px;
+  }
 
   h3 {
     margin: 0 0 12px 0;

@@ -40,7 +40,7 @@
               </ul>
               <h1>Фитнес центр</h1>
             </div>
-            <button class="btn">Купить абонемент</button>
+            <a href="#tickets" class="btn">Купить абонемент</a>
           </div>
           <div class="header__picture">
             <picture>
@@ -52,7 +52,7 @@
       </div>
     </header>
     <main>
-      <section class="gym">
+      <section class="gym" id="gym">
         <div class="gym__wrapper">
           <div class="gym__text">
             <h2>Тренажерный зал</h2>
@@ -81,83 +81,83 @@
         </div>
       </div>
       </section>
-      <section class="tickets">
+      <section class="tickets" id="tickets">
         <div class="tickets__wrapper">
           <h2>Абонементы</h2>
           <div class="tickets__tabs">
-            <input type="radio" name="tab-set" id="tab-1" checked>
+            <input type="radio" name="tab-set" id="tab-1" data-input-1 checked>
             <label for="tab-1">1 месяц</label>
-            <input type="radio" name="tab-set" id="tab-2">
+            <input type="radio" name="tab-set" id="tab-2" data-input-2>
             <label for="tab-2">6 месяцев</label>
-            <input type="radio" name="tab-set" id="tab-3">
+            <input type="radio" name="tab-set" id="tab-3" data-input-3>
             <label for="tab-3">12 месяцев</label>
             <div class="tickets__panels">
-              <ul class="tickets__panel">
+              <ul class="tickets__panel" data-panel-1>
                 <li class="tickets__card">
                   <h3>С тренером</h3>
                   <p>12 занятий</p>
                   <span data-price="5000"></span>
                   <span>&#8381;</span>
-                  <button class="btn btn--dark" type="button">купить абонемент</button>
+                  <a href="#" class="btn btn--dark">купить абонемент</a>
                 </li>
                 <li class="tickets__card">
                   <h3>Дневной</h3>
                   <p>с 8:00 до 17:00</p>
                   <span data-price="1700"></span>
                   <span>&#8381;</span>
-                  <button class="btn btn--dark" type="button">купить абонемент</button>
+                  <a href="#" class="btn btn--dark">купить абонемент</a>
                 </li>
                 <li class="tickets__card">
                   <h3>Полный день</h3>
                   <p>с 8:00 до 22:00 </p>
                   <span data-price="2700"></span>
                   <span>&#8381;</span>
-                  <button class="btn btn--dark" type="button">купить абонемент</button>
+                  <a href="#" class="btn btn--dark">купить абонемент</a>
                 </li>
               </ul>
-              <ul class="tickets__panel">
+              <ul class="tickets__panel" data-panel-2>
                 <li class="tickets__card">
                   <h3>С тренером</h3>
                   <p>72 занятия</p>
                   <span data-price="30000"></span>
                   <span>&#8381;</span>
-                  <button class="btn btn--dark" type="button">купить абонемент</button>
+                  <a href="#" class="btn btn--dark">купить абонемент</a>
                 </li>
                 <li class="tickets__card">
                   <h3>Дневной</h3>
                   <p>с 8:00 до 17:00</p>
                   <span data-price="10200"></span>
                   <span>&#8381;</span>
-                  <button class="btn btn--dark" type="button">купить абонемент</button>
+                  <a href="#" class="btn btn--dark">купить абонемент</a>
                 </li>
                 <li class="tickets__card">
                   <h3>Полный день</h3>
                   <p>с 8:00 до 22:00</p>
                   <span data-price="16200"></span><span>&#8381;</span>
-                  <button class="btn btn--dark" type="button">купить абонемент</button>
+                  <a href="#" class="btn btn--dark">купить абонемент</a>
                 </li>
               </ul>
-              <ul class="tickets__panel">
+              <ul class="tickets__panel" data-panel-3>
                 <li class="tickets__card">
                   <h3>С тренером</h3>
                   <p>144 занятия</p>
                   <span data-price="60000"></span>
                   <span>&#8381;</span>
-                  <button class="btn btn--dark">купить абонемент</button>
+                  <a href="#" class="btn btn--dark">купить абонемент</a>
                 </li>
                 <li class="tickets__card">
                   <h3>Дневной</h3>
                   <p>с 8:00 до 17:00</p>
                   <span data-price="20400"></span>
                   <span>&#8381;</span>
-                  <button class="btn btn--dark" type="button">купить абонемент</button>
+                  <a href="#" class="btn btn--dark">купить абонемент</a>
                 </li>
                 <li class="tickets__card">
                   <h3>Полный день</h3>
                   <p>с 8:00 до 22:00</p>
                   <span data-price="32400"></span>
                   <span>&#8381;</span>
-                  <button class="btn btn--dark" type="button">купить абонемент</button>
+                  <a href="#" class="btn btn--dark">купить абонемент</a>
                 </li>
               </ul>
             </div>
@@ -194,7 +194,7 @@
           </div>
         </div>
       </section>
-      <section class="couches">
+      <section class="couches" id="couches">
         <div class="couches__wrapper">
           <h2>Тренеры</h2>
           <div class="couches__slider">
@@ -442,7 +442,7 @@
           </ul>
         </div>
       </section>
-      <section class="promotions">
+      <section class="promotions" id="promotions">
         <div class="promotions__wrapper">
           <h2>Акции</h2>
           <div class="promotions__inner">
@@ -489,10 +489,8 @@
                       <img width="260" height="294" src="img/reviews.jpg" srcset="img/reviews@2x.jpg 2x" alt="Анна Орлова.">
                     </picture>
                   </div>
-                  <div class="reviews__text">
-                    <h3>Анна Орлова</h3>
-                    <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                  </div>
+                  <h3>Анна Орлова</h3>
+                  <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
                 </li>
                 <li class="swiper-slide reviews__slide" tabindex="0" data-slide-swiper-2>
                   <div class="reviews__picture">
@@ -501,10 +499,8 @@
                       <img width="260" height="294" src="img/reviews.jpg" srcset="img/reviews@2x.jpg 2x" alt="Анна Орлова-II.">
                     </picture>
                   </div>
-                  <div class="reviews__text">
-                    <h3>Анна Орлова-II</h3>
-                    <p>&laquo;Все еще хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный&raquo;</p>
-                  </div>
+                  <h3>Анна Орлова-II</h3>
+                  <p>&laquo;Все еще хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный&raquo;</p>
                 </li>
                 <li class="swiper-slide reviews__slide" tabindex="0" data-slide-swiper-2>
                   <div class="reviews__picture">
@@ -513,10 +509,8 @@
                       <img width="260" height="294" src="img/reviews.jpg" srcset="img/reviews@2x.jpg 2x" alt="Анна Орлова-III.">
                     </picture>
                   </div>
-                  <div class="reviews__text">
-                    <h3>Анна Орлова-III</h3>
-                    <p>&laquo;Опять хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                  </div>
+                  <h3>Анна Орлова-III</h3>
+                  <p>&laquo;Опять хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
                 </li>
               </ul>
             </div>
@@ -572,30 +566,33 @@
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
-        <ul class="footer__list">
-          <li class="footer__list-item footer__list-item--logo">
-            <a href="#" aria-label="Ссылка на главную страницу.">
-              <picture>
-                <source media="(max-width: 767px)" srcset="img/svg/logo-footer-mobile.svg">
-                <source media="(max-width: 1200px)" srcset="img/svg/logo-footer-tablet.svg">
-                <img src="img/svg/logo-footer-desktop.svg" width="86" height="17" alt="Логотип Supergym.">
-              </picture>
-            </a>
+        <div class="footer__logo">
+          <a href="#" aria-label="Ссылка на главную страницу.">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/svg/logo-footer-mobile.svg">
+              <source media="(max-width: 1200px)" srcset="img/svg/logo-footer-tablet.svg">
+              <img src="img/svg/logo-footer-desktop.svg" width="86" height="17" alt="Логотип Supergym.">
+            </picture>
+          </a>
+        </div>
+        <ul class="footer__list footer__list--nav">
+          <li class="footer__list-item">
+            <a href="#gym">Услуги</a>
           </li>
           <li class="footer__list-item">
-            <a href="#">Услуги</a>
+            <a href="#tickets">Абонементы</a>
+          </li>
+        </ul>
+        <ul class="footer__list footer__list--nav-2">
+          <li class="footer__list-item">
+            <a href="#promotions">Акции</a>
           </li>
           <li class="footer__list-item">
-            <a href="#">Абонементы</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="#">Акции</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="#">Тренеры</a>
+            <a href="#couches">Тренеры</a>
           </li>
           <li class="footer__list-item">
             <a href="#">Расписание</a>
+          </li>
         </ul>
         <ul class="footer__list footer__list--social">
           <li class="footer__list-item footer__list-item--social">

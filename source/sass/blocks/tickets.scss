@@ -25,6 +25,10 @@
       right: -9px;
       background-size: 289px;
     }
+
+    @include vp-767 {
+      display: none;
+    }
   }
 }
 
@@ -42,6 +46,10 @@
     flex-direction: column;
   }
 
+  @include vp-767 {
+    padding: 64px clamp(15px, $padding-mobile, 30px) 70px;
+  }
+
   h2 {
     margin: 0;
     padding: 0;
@@ -55,6 +63,11 @@
       margin-right: 10px;
       font-size: 42px;
       line-height: 50px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
     }
   }
 }
@@ -74,6 +87,10 @@
 
     @include vp-1199 {
       width: 330px;
+    }
+
+    @include vp-767 {
+      width: 290px;
     }
   }
 
@@ -96,6 +113,18 @@
       font-size: 18px;
       padding: 20px 0 13px;
       margin: 0 25px;
+    }
+
+    @include vp-767 {
+      display: inline-flex;
+      flex: auto;
+      font-size: 16px;
+      margin: 0;
+      padding: 20px 0 16px;
+
+      &:nth-child(4n) {
+        margin: 0 42px;
+      }
     }
   }
 
@@ -121,20 +150,15 @@
   }
 }
 
-.tickets__tabs > input:first-child:checked ~ .tickets__panels > .tickets__panel:first-child,
-.tickets__tabs > input:nth-child(3):checked ~ .tickets__panels > .tickets__panel:nth-child(2),
-.tickets__tabs > input:nth-child(5):checked ~ .tickets__panels > .tickets__panel:nth-child(3),
-.tickets__tabs > input:nth-child(7):checked ~ .tickets__panels > .tickets__panel:nth-child(4),
-.tickets__tabs > input:nth-child(9):checked ~ .tickets__panels > .tickets__panel:nth-child(5),
-.tickets__tabs > input:nth-child(11):checked ~ .tickets__panels > .tickets__panel:nth-child(6) {
-  display: grid;
-}
-
 .tickets__panels {
   margin: 38px 0 0 0;
 
   @include vp-1199 {
     margin: 44px 0 0 0;
+  }
+
+  @include vp-767 {
+    margin: 33px 0 0 0;
   }
 }
 
@@ -147,6 +171,11 @@
   @include vp-1199 {
     grid-template-columns: 1fr;
     margin: 0 118px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    gap: 35px;
   }
 }
 
@@ -162,12 +191,16 @@
     grid-template-columns: 1fr;
   }
 
+  @include vp-767 {
+    padding: 44px 36px 49px;
+  }
+
   &:hover,
   &:focus-within {
     border-image: linear-gradient(148.82deg, $color-crimson 0.85%, $color-smalt 100%);
     border-image-slice: 1;
 
-    button {
+    a {
       background: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
       outline: none;
       color: $color-default-white;
@@ -182,6 +215,11 @@
     font-size: 26px;
     line-height: 29px;
     color: $color-sapphire;
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 24px;
+    }
   }
 
   p {
@@ -192,6 +230,10 @@
     line-height: 150%;
     color: $color-chambray;
     text-align: center;
+
+    @include vp-767 {
+      margin: 0 0 54px 0;
+    }
   }
 
   span {
@@ -202,6 +244,10 @@
     line-height: 150%;
     margin: 0 0 0 6px;
 
+    @include vp-767 {
+      font-size: 48px;
+    }
+
     &::after {
       content: attr(data-price);
       font-weight: 700;
@@ -211,6 +257,11 @@
       color: $color-egyptian-blue;
       left: -4px;
       top: 0;
+
+      @include vp-767 {
+        font-size: 48px;
+        left: 0;
+      }
     }
 
     &::before {
@@ -223,10 +274,16 @@
       line-height: 150%;
       color: $color-whisper;
       opacity: 0.48;
+
+      @include vp-767 {
+        font-size: 80px;
+        bottom: -10px;
+        left: -17px;
+      }
     }
   }
 
-  button {
+  a {
     width: 100%;
     justify-content: center;
     margin-top: 34px;
@@ -237,6 +294,20 @@
 
     @include vp-1199 {
       margin-top: 36px;
+      padding: 26px 0 22px;
+    }
+
+    @include vp-767 {
+      margin-top: 31px;
+      padding: 25px 0 23px;
     }
   }
+}
+
+// tabs logic
+[data-input-1]:checked ~ .tickets__panels > [data-panel-1],
+[data-input-2]:checked ~ .tickets__panels > [data-panel-2],
+[data-input-3]:checked ~ .tickets__panels > [data-panel-3],
+[data-input-4]:checked ~ .tickets__panels > [data-panel-4] {
+  display: grid;
 }

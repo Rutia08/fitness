@@ -3,15 +3,41 @@
 }
 
 .footer__wrapper {
-  padding: 30px clamp(30px, $padding-desktop, 103px);
+  padding: 36px clamp(30px, $padding-desktop, 103px);
   margin: 0 auto;
   max-width: 1366px;
   color: $color-default-white;
   display: flex;
-  justify-content: space-between;
 
   @include vp-1199 {
-    padding: 35px clamp(10px, $padding-tablet, 45px) 50px;
+    padding: 35px clamp(10px, $padding-tablet, 45px);
+  }
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 259px;
+
+  @include vp-1199 {
+    margin-right: 43px;
+  }
+
+  a {
+    display: block;
+    padding: 10px 0 5px;
+    min-width: 86px;
+
+    @include vp-1199 {
+      padding: 5px 0;
+    }
+  }
+
+  img {
+    @include vp-1199 {
+      width: 82px;
+      height: 18px;
+    }
   }
 }
 
@@ -20,16 +46,30 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-left: -20px;
-  max-width: 950px;
+
+  &--nav {
+    min-width: 190px;
+
+    @include vp-1199 {
+      min-width: 175px;
+    }
+  }
+
+  &--nav-2 {
+    min-width: 275px;
+
+    @include vp-1199 {
+      min-width: 250px;
+    }
+  }
 
   &--social {
     margin-right: -6px;
-    justify-self: end;
-    max-width: 150px;
+    min-width: 115px;
+    margin-left: auto;
 
     @include vp-1199 {
-      margin: 4px -14px 0 0;
+      margin: 4px -18px 0 auto;
     }
   }
 }
@@ -50,26 +90,6 @@
 
     &:hover {
       color: $color-cobalt;
-    }
-  }
-
-  img {
-    @include vp-1199 {
-      width: 82px;
-      height: 18px;
-    }
-  }
-
-  &--logo {
-    margin: 10px 250px 0 10px;
-    min-width: 110px;
-
-    @include vp-1199 {
-      margin: 0 40px 0 9px;
-    }
-
-    a {
-      display: block;
     }
   }
 

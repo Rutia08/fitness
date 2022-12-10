@@ -10,6 +10,11 @@
     padding: 100px clamp(10px, $padding-tablet, 45px) 53px;
     grid-template-columns: $games-text-width-tablet $games-picture-width-tablet;
   }
+
+  @include vp-767 {
+    padding: 70px clamp(15px, $padding-mobile, 30px) 35px;
+    grid-template-columns: 1fr;
+  }
 }
 
 .games__text {
@@ -19,6 +24,10 @@
 
   @include vp-1199 {
     padding: 46px 45px;
+  }
+
+  @include vp-767 {
+    padding: 46px 45px 54px;
   }
 
   p {
@@ -46,6 +55,10 @@
       padding: 14px;
       font-size: 10px;
       line-height: 12px;
+    }
+
+    @include vp-767 {
+      padding: 12px;
     }
 
     &:hover,
@@ -113,6 +126,10 @@
     width: 100%;
     height: 2px;
     background: $color-default-white;
+
+    @include vp-767 {
+      max-width: 65px;
+    }
   }
 
   span {
@@ -167,4 +184,8 @@
 
 .games__picture {
   background-color: $color-midnight-express;
+
+  img {
+    aspect-ratio: 290 / 292;
+  }
 }

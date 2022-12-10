@@ -19,6 +19,8 @@ html {
   line-height: 24px;
   font-family: $font-roboto-sans-serif;
   color: $color-default-black;
+  min-width: 320px;
+  scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

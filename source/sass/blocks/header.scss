@@ -4,6 +4,10 @@
   @include vp-1199 {
     background: conic-gradient(from 139.4deg at 20.7% 35.74%, $color-venetian-red -46.69deg, $color-dark-cerulean 32.24deg, $color-venetian-red 313.31deg, $color-dark-cerulean 392.24deg);
   }
+
+  @include vp-767 {
+    background: conic-gradient(from 171.43deg at 35.31% 34.22%, $color-venetian-red -46.69deg, $color-dark-cerulean 32.24deg, $color-venetian-red 313.31deg, $color-dark-cerulean 392.24deg);
+  }
 }
 
 .header__wrapper {
@@ -15,9 +19,9 @@
     padding: 34px clamp(10px, $padding-tablet, 45px) 82px;
   }
 
-  // @include vp-767 {
-  //   padding: 20px clamp(15px, $padding-mobile, 30px) 10px;
-  // }
+  @include vp-767 {
+    padding: 15px clamp(15px, $padding-mobile, 30px) 79px;
+  }
 }
 
 .header__menu {
@@ -43,6 +47,11 @@
       line-height: 29px;
       letter-spacing: 0.02em;
     }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -53,6 +62,12 @@
     margin-top: 5px;
     width: 82px;
     height: 17px;
+  }
+
+  @include vp-767 {
+    margin-top: 5px;
+    width: 67px;
+    height: 13px;
   }
 }
 
@@ -67,6 +82,10 @@
     margin: 19px 0 0 0;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -96,6 +115,12 @@
       line-height: 41px;
       padding: 0 3px 8px 0;
     }
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 34px;
+      padding: 0 3px 14px 0;
+    }
   }
 
   button {
@@ -105,6 +130,12 @@
 
     @include vp-1199 {
       padding: 20px 30px 19px;
+    }
+
+    @include vp-767 {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 450px;
     }
   }
 }
@@ -117,6 +148,11 @@
   @include vp-1199 {
     grid-template-columns: 1fr 210px;
     margin-bottom: 36px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr $header-text-wrapper-width-mobile;
+    margin-bottom: 23px;
   }
 
   h1 {
@@ -139,11 +175,18 @@
   }
 
   ul {
+    display: flex;
+    flex-direction: column;
     margin: 0 0 36px 0;
-    align-self: end;
+    align-self: flex-end;
 
     @include vp-1199 {
       margin: 0 0 20px 0;
+    }
+
+    @include vp-767 {
+      align-self: flex-start;
+      margin: 78px -13px 0 0;
     }
   }
 
@@ -160,5 +203,9 @@
     img {
       aspect-ratio: 324/390;
     }
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }

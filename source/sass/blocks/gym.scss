@@ -11,6 +11,10 @@
     display: flex;
     flex-direction: column;
   }
+
+  @include vp-767 {
+    padding: 64px 0 70px;
+  }
 }
 
 .gym__text {
@@ -19,6 +23,10 @@
 
   @include vp-1199 {
     padding: 0;
+  }
+
+  @include vp-767 {
+    padding: 0 clamp(15px, $padding-mobile, 30px) 0;
   }
 
   h2 {
@@ -36,6 +44,13 @@
       font-size: 42px;
       line-height: 50px;
     }
+
+    @include vp-767 {
+      text-align: left;
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 5px;
+    }
   }
 
   h3 {
@@ -50,6 +65,11 @@
       text-align: center;
       font-size: 18px;
       line-height: 150%;
+    }
+
+    @include vp-767 {
+      margin: 0 0 24px 0;
+      text-align: left;
     }
   }
 
@@ -71,6 +91,12 @@
         display: none;
       }
     }
+
+    @include vp-767 {
+      margin: 0 0 33px 0;
+      padding: 0 30px 0 0;
+      text-align: left;
+    }
   }
 }
 
@@ -84,6 +110,15 @@
       aspect-ratio: 678 / 345;
       width: 100%;
     }
+
+    @include vp-767 {
+      aspect-ratio: 320 / 313;
+      width: 100%;
+    }
+  }
+
+  @include vp-767 {
+    margin: 0 0 40px 0;
   }
 }
 
@@ -96,6 +131,12 @@
   @include vp-1199 {
     margin: -84px auto 0;
     width: $gym-video-width-tablet;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    aspect-ratio: 320 / 167;
+    width: 100%;
   }
 
   &:hover,
@@ -127,6 +168,10 @@
 
     @include vp-1199 {
       aspect-ratio: 266/167;
+    }
+
+    @include vp-767 {
+      aspect-ratio: 320 / 167;
     }
   }
 

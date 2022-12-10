@@ -4,10 +4,10 @@
 }
 
 .form__wrapper {
-  padding: 56px clamp(30px, $padding-desktop-3, 170px) 69px clamp(30px, $padding-desktop-4, 103px);
+  padding: 56px clamp(30px, $padding-desktop-4, 170px) 69px;
 
   @include vp-1199 {
-    padding: 62px clamp(133px, $feedback-padding-tablet, 250px) 67px;
+    padding: 62px clamp(133px, $feedback-padding-tablet, 250px) 68px;
     margin: 0 30px 0 0;
   }
 
@@ -39,7 +39,7 @@
     line-height: 16px;
 
     @include vp-1199 {
-      margin-top: 28px;
+      margin-top: 26px;
       padding: 16px;
     }
   }
@@ -48,9 +48,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
+    max-width: 410px;
 
     @include vp-1199 {
       column-gap: 60px;
+      max-width: 100%;
     }
   }
 

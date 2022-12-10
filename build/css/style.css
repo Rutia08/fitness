@@ -3420,6 +3420,10 @@ button,
     margin: 0 10px 0 0;
   }
 
+  .games__day::before {
+    max-width: 65px;
+  }
+
   .games__day span {
     font-size: 24px;
   }
@@ -3866,10 +3870,6 @@ button,
 
   .games__text a {
     padding: 12px;
-  }
-
-  .games__day::before {
-    max-width: 65px;
   }
 
   .games__picture img {

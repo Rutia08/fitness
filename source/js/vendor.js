@@ -104,3 +104,10 @@ swiperNext2.addEventListener('click', () => {
   swiper2.slideNext();
   buttonDisable2();
 });
+
+const slidesDuplicate = document.querySelectorAll('.swiper-slide-duplicate');
+
+slidesDuplicate.forEach(el => {
+  el.removeAttribute('tabindex');
+});
+

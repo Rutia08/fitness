@@ -127,7 +127,7 @@
     height: 2px;
     background: $color-default-white;
 
-    @include vp-767 {
+    @include vp-1199 {
       max-width: 65px;
     }
   }

@@ -11,6 +11,10 @@
     padding: 62px clamp(103px, $feedback-padding-tablet-2, 250px) 63px clamp(133px, $feedback-padding-tablet, 250px);
   }
 
+  @include vp-767 {
+    padding: 64px clamp(15px, $padding-mobile, 30px) 62px;
+  }
+
   h2 {
     margin: 0 0 25px 0;
     padding: 0;
@@ -24,6 +28,12 @@
       font-size: 42px;
       line-height: 50px;
       margin: 0 0 31px 0;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+      margin: 0 0 34px 0;
     }
   }
 }
@@ -40,6 +50,10 @@
     row-gap: 20px;
   }
 
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -53,6 +67,10 @@
 
     @include vp-1199 {
       transform: translate(0, -50%);
+    }
+
+    @include vp-767 {
+      display: none;
     }
   }
 }
@@ -71,6 +89,10 @@
 
     @include vp-1199 {
       padding-left: 0;
+    }
+
+    @include vp-767 {
+      order: 2;
     }
   }
 

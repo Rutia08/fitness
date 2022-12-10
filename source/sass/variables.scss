@@ -96,6 +96,7 @@ $games-header-width-desktop: percentage(calc(231 / 500));
 $slider-width-desktop: 1160;
 $couches-slider-width-desktop: percentage(calc(1160 / 1366));
 $contacts-gap: percentage(calc(100 / 460));
+$reviews-picture-width-desktop: percentage(calc(80 / 437));
 
 // tablet
 $padding-tablet: percentage(calc(45 / 768));
@@ -110,5 +111,8 @@ $feedback-padding-tablet-2: percentage(calc(103 / 768));
 
 // mobile
 $padding-mobile: percentage(calc(15 / 320));
+$padding-mobile-2: percentage(calc(25 / 226));
 $header-text-wrapper-width-mobile: percentage(calc(190 / 290));
 $label-margin-mobile: percentage(calc(42 / 290));
+$reviews-picture-width-mobile: percentage(calc(68 / 437));
+$reviews-picture-width-mobile: percentage(calc(68 / 437));

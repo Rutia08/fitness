@@ -1887,6 +1887,26 @@ button,
   clip-path: inset(100%);
 }
 
+.tickets__tabs input:focus + label {
+  outline: 2px solid #102654;
+  outline-offset: 2px;
+}
+
+.tickets__tabs input:checked + label {
+  color: #102654;
+}
+
+.tickets__tabs input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 2;
+  background: #d10a42;
+}
+
 .tickets__tabs label {
   position: relative;
   display: inline-block;
@@ -1899,25 +1919,8 @@ button,
   line-height: 150%;
 }
 
-.tickets__tabs input:checked + label {
-  color: #102654;
-}
-
-.tickets__tabs label:hover,
-.tickets__tabs input:focus + label {
+.tickets__tabs label:hover {
   color: #ed0233;
-}
-
-.tickets__tabs input:focus + label::after,
-.tickets__tabs input:checked + label::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  z-index: 2;
-  background: #d10a42;
 }
 
 .tickets__panels {
@@ -2019,7 +2022,9 @@ button,
 [data-input-1]:checked ~ .tickets__panels > [data-panel-1],
 [data-input-2]:checked ~ .tickets__panels > [data-panel-2],
 [data-input-3]:checked ~ .tickets__panels > [data-panel-3],
-[data-input-4]:checked ~ .tickets__panels > [data-panel-4] {
+[data-input-4]:checked ~ .tickets__panels > [data-panel-4],
+[data-input-5]:checked ~ .tickets__panels > [data-panel-5],
+[data-input-6]:checked ~ .tickets__panels > [data-panel-6] {
   display: -ms-grid;
   display: grid;
 }
@@ -3180,11 +3185,11 @@ button,
 }
 
 .footer__list--nav {
-  min-width: 190px;
+  min-width: 195px;
 }
 
 .footer__list--nav-2 {
-  min-width: 275px;
+  min-width: 280px;
 }
 
 .footer__list--social {

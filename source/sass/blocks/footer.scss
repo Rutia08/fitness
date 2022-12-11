@@ -3,7 +3,7 @@
 }
 
 .footer__wrapper {
-  padding: 36px clamp(30px, $padding-desktop, 103px);
+  padding: 36px clamp(30px, $padding-desktop, 103px) 33px;
   margin: 0 auto;
   max-width: 1366px;
   color: $color-default-white;
@@ -37,7 +37,7 @@
 
   a {
     display: block;
-    padding: 10px 0 5px;
+    padding: 13px 0 5px;
     min-width: 86px;
 
     @include vp-1199 {
@@ -99,7 +99,7 @@
   }
 
   &--social {
-    margin-right: -6px;
+    margin-right: -12px;
     min-width: 115px;
     margin-left: auto;
 
@@ -156,7 +156,7 @@
     a {
       display: block;
       padding: 5px;
-      margin-right: 2px;
+      margin-right: 1px;
 
       @include vp-767 {
         padding: 5px;

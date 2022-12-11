@@ -49,8 +49,7 @@
 
 .promotions__promo {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: $color-torch-red;
+  grid-template-columns: 50% 50%;
 
   @include vp-1199 {
     grid-template-columns: 1fr $promo-picture-tablet;
@@ -62,6 +61,7 @@
 }
 
 .promotions__text {
+  background-color: $color-torch-red;
   color: $color-default-white;
   padding: 34px 45px 45px;
   display: flex;
@@ -122,18 +122,9 @@
 }
 
 .promotions__picture {
+  background-color: $color-cornflower-blue;
   width: 100%;
   height: auto;
-  aspect-ratio: 280 / 462;
-
-  @include vp-1199 {
-    aspect-ratio: 399 / 462;
-  }
-
-  @include vp-767 {
-    aspect-ratio: 290 / 299;
-    max-height: 450px;
-  }
 
   img {
     aspect-ratio: 280 / 462;
@@ -144,8 +135,6 @@
 
     @include vp-767 {
       aspect-ratio: 290 / 299;
-      max-width: 400px;
-      margin: 0 auto;
     }
   }
 }

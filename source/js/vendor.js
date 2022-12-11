@@ -34,6 +34,12 @@ function genereateURL(id) {
   return 'https://www.youtube.com/embed/' + id + query;
 }
 
+
+const couches = document.querySelector('[data-couches]');
+const reviews = document.querySelector('[data-reviews]');
+couches.classList.remove('nojs');
+reviews.classList.remove('nojs');
+
 /* eslint-disable */
 // swiper couches
 const swiperPrev1 = document.querySelector('[data-swiper-1-prev]');
@@ -110,4 +116,3 @@ const slidesDuplicate = document.querySelectorAll('.swiper-slide-duplicate');
 slidesDuplicate.forEach(el => {
   el.removeAttribute('tabindex');
 });
-

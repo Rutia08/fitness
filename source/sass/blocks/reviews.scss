@@ -4,12 +4,6 @@
   max-width: 1366px;
   position: relative;
 
-  // ul {
-  //   display: grid;
-  //   grid-template-columns: repeat(4, 1fr);
-  //   gap: 40px;
-  // }
-
   @include vp-1199 {
     padding: 42px clamp(10px, $padding-tablet, 45px) 100px;
   }
@@ -198,5 +192,25 @@
     &::after {
       background-color: $color-dark-gray;
     }
+  }
+}
+
+[data-reviews].nojs {
+  .reviews__slider {
+    display: block;
+  }
+
+  .reviews__swiper-2 {
+    margin: 0;
+  }
+
+  .reviews__swiper-2-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  button {
+    display: none;
   }
 }

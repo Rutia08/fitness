@@ -1764,6 +1764,11 @@ button,
   background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
 }
 
+.gym__video:hover a::after,
+.gym__video:focus-within a::after {
+  background-color: rgba(122, 20, 91, 0.5);
+}
+
 .gym__video a {
   cursor: pointer;
   position: relative;
@@ -1821,15 +1826,15 @@ button,
 .tickets::before {
   content: "";
   position: absolute;
-  bottom: -99px;
+  bottom: -95px;
   right: -108px;
   -webkit-transform: rotate(-30deg);
   -ms-transform: rotate(-30deg);
   transform: rotate(-30deg);
   width: 321px;
   height: 384px;
-  background-image: -webkit-image-set(url("../img/tickets-background.webp") 1x, url("../img/tickets-background.png") 1x, url("../img/tickets-background@2x.webp") 2x, url("../img/tickets-background@2x.jpg") 2x);
-  background-image: image-set("../img/tickets-background.webp" 1x, "../img/tickets-background.png" 1x, "../img/tickets-background@2x.webp" 2x, "../img/tickets-background@2x.jpg" 2x);
+  background-image: -webkit-image-set(url("../img/tickets-background.webp") 1x, url("../img/tickets-background.png") 1x, url("../img/tickets-background@2x.webp") 2x, url("../img/tickets-background@2x.png") 2x);
+  background-image: image-set("../img/tickets-background.webp" 1x, "../img/tickets-background.png" 1x, "../img/tickets-background@2x.webp" 2x, "../img/tickets-background@2x.png" 2x);
 }
 
 .tickets__wrapper {
@@ -1863,7 +1868,7 @@ button,
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   top: 58px;
-  width: 350px;
+  width: 340px;
   height: 2px;
   background: rgba(120, 120, 120, 0.2);
 }
@@ -1929,7 +1934,7 @@ button,
 
 .tickets__card {
   margin: 0;
-  padding: 56px clamp(10px, 18.8888888889%, 68px) 60px;
+  padding: 56px clamp(10px, 19.7222222222%, 71px) 62px;
   background-color: #ffffff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1973,34 +1978,30 @@ button,
 
 .tickets__card span {
   position: relative;
-  color: #102654;
-  font-weight: 700;
-  font-size: 58px;
-  line-height: 150%;
-  margin: 0 0 0 6px;
-}
-
-.tickets__card span::after {
-  content: attr(data-price);
+  color: #103aae;
   font-weight: 700;
   font-size: 60px;
   line-height: 150%;
-  position: relative;
-  color: #103aae;
-  left: -4px;
-  top: 0;
+  margin: 0 0 0 5px;
+  z-index: 0;
 }
 
 .tickets__card span::before {
   content: attr(data-price);
   position: absolute;
   bottom: -15px;
-  left: -25px;
+  left: -21px;
   font-weight: 700;
   font-size: 100px;
   line-height: 150%;
   color: #e8e8e8;
   opacity: 0.48;
+  z-index: -1;
+}
+
+.tickets__card span + span {
+  color: #102654;
+  margin: 0 0 0 9px;
 }
 
 .tickets__card a {
@@ -2008,8 +2009,8 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 34px;
-  padding: 26px 0;
+  margin-top: 36px;
+  padding: 24px 0;
   color: #102654;
   border: none;
   outline: 2px solid #102654;
@@ -2113,7 +2114,7 @@ button,
   font-weight: 700;
   font-size: 40px;
   line-height: 150%;
-  margin-right: 5px;
+  margin-right: 7px;
 }
 
 .games__day p {
@@ -2370,6 +2371,26 @@ button,
   transform: rotate(180deg);
 }
 
+[data-couches].nojs .couches__slider {
+  display: block;
+}
+
+[data-couches].nojs .couches__swiper-1 {
+  margin: 0;
+}
+
+[data-couches].nojs .couches__swiper-1-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+[data-couches].nojs button {
+  display: none;
+}
+
 .advantages {
   background: #f8f9fc;
 }
@@ -2573,12 +2594,12 @@ button,
 .promotions__promo {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  background-color: #ed0233;
+  -ms-grid-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
 }
 
 .promotions__text {
+  background-color: #ed0233;
   color: #ffffff;
   padding: 34px 45px 45px;
   display: -webkit-box;
@@ -2637,9 +2658,9 @@ button,
 }
 
 .promotions__picture {
+  background-color: #5591e6;
   width: 100%;
   height: auto;
-  aspect-ratio: 280/462;
 }
 
 .promotions__picture img {
@@ -2854,6 +2875,44 @@ button,
   background-color: #afafaf;
 }
 
+[data-reviews].nojs .reviews__slider {
+  display: block;
+}
+
+[data-reviews].nojs .reviews__swiper-2 {
+  margin: 0;
+}
+
+[data-reviews].nojs .reviews__swiper-2-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+[data-reviews].nojs button {
+  display: none;
+}
+
+.feedback {
+  background: -webkit-gradient(linear, left top, right top, from(#102654), color-stop(50%, #102654), color-stop(50%, #ffffff), to(#ffffff));
+  background: -o-linear-gradient(left, #102654, #102654 50%, #ffffff 50%, #ffffff 100%);
+  background: linear-gradient(to right, #102654, #102654 50%, #ffffff 50%, #ffffff 100%);
+  position: relative;
+}
+
+.feedback::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: #74819c;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+
 .feedback__wrapper {
   padding: 0;
   margin: 0 auto;
@@ -3009,7 +3068,6 @@ button,
 .contacts {
   color: #102654;
   background-color: #ffffff;
-  border-top: 1px solid #74819c;
 }
 
 .contacts__wrapper {
@@ -3017,7 +3075,7 @@ button,
 }
 
 .contacts__wrapper h2 {
-  margin: 0 0 25px 0;
+  margin: 0 0 27px 0;
   padding: 0;
   font-family: "Alumni Sans", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
   font-weight: 600;
@@ -3061,7 +3119,7 @@ button,
 }
 
 .contacts__item h3 {
-  margin: 0 0 5px 0;
+  margin: 0 0 4px 0;
   padding: 0;
   font-weight: 700;
   font-size: 16px;
@@ -3085,7 +3143,7 @@ button,
 }
 
 .footer__wrapper {
-  padding: 36px clamp(30px, 7.5402635432%, 103px);
+  padding: 36px clamp(30px, 7.5402635432%, 103px) 33px;
   margin: 0 auto;
   max-width: 1366px;
   color: #ffffff;
@@ -3106,7 +3164,7 @@ button,
 
 .footer__logo a {
   display: block;
-  padding: 10px 0 5px;
+  padding: 13px 0 5px;
   min-width: 86px;
 }
 
@@ -3130,7 +3188,7 @@ button,
 }
 
 .footer__list--social {
-  margin-right: -6px;
+  margin-right: -12px;
   min-width: 115px;
   margin-left: auto;
 }
@@ -3158,7 +3216,7 @@ button,
 .footer__list-item--social a {
   display: block;
   padding: 5px;
-  margin-right: 2px;
+  margin-right: 1px;
 }
 
 /* @mixin hover-focus {
@@ -3280,7 +3338,7 @@ button,
   }
 
   .gym__text h2 {
-    margin: 0;
+    margin: 0 16px 0 0;
     text-align: center;
     font-size: 42px;
     line-height: 50px;
@@ -3426,6 +3484,7 @@ button,
 
   .games__day span {
     font-size: 24px;
+    margin-right: 4px;
   }
 
   .games__day p {
@@ -3459,6 +3518,11 @@ button,
 
   .couches__picture img {
     aspect-ratio: 268/294;
+  }
+
+  [data-couches].nojs .couches__swiper-1-wrapper {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .advantages__wrapper {
@@ -3520,10 +3584,6 @@ button,
     margin: 0 0 2px 0;
   }
 
-  .advantages__description p {
-    text-align: center;
-  }
-
   .promotions__wrapper {
     padding: 92px clamp(10px, 5.859375%, 45px) 50px;
   }
@@ -3543,10 +3603,6 @@ button,
   .promotions__promo {
     -ms-grid-columns: 1fr 58.8495575221%;
     grid-template-columns: 1fr 58.8495575221%;
-  }
-
-  .promotions__picture {
-    aspect-ratio: 399/462;
   }
 
   .promotions__picture img {
@@ -3575,6 +3631,14 @@ button,
 
   .reviews__slide {
     padding: 54px 65px;
+  }
+
+  .feedback {
+    background: none;
+  }
+
+  .feedback::before {
+    display: none;
   }
 
   .feedback__wrapper {
@@ -3804,6 +3868,7 @@ button,
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    vertical-align: baseline;
     -webkit-box-flex: 1;
     -ms-flex: auto;
     flex: auto;
@@ -3840,11 +3905,6 @@ button,
 
   .tickets__card span {
     font-size: 48px;
-  }
-
-  .tickets__card span::after {
-    font-size: 48px;
-    left: 0;
   }
 
   .tickets__card span::before {
@@ -3920,6 +3980,11 @@ button,
 
   .couches__button--next {
     margin-left: 16px;
+  }
+
+  [data-couches].nojs .couches__swiper-1-wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .advantages__wrapper {
@@ -4004,6 +4069,10 @@ button,
     margin: 9px 40px 0;
   }
 
+  .advantages__description p {
+    text-align: center;
+  }
+
   .promotions__wrapper {
     padding: 64px clamp(15px, 4.6875%, 30px) 35px;
   }
@@ -4034,15 +4103,8 @@ button,
     margin-bottom: 32px;
   }
 
-  .promotions__picture {
-    aspect-ratio: 290/299;
-    max-height: 450px;
-  }
-
   .promotions__picture img {
     aspect-ratio: 290/299;
-    max-width: 400px;
-    margin: 0 auto;
   }
 
   .promotions__list {

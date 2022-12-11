@@ -5,7 +5,7 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: -99px;
+    bottom: -95px;
     right: -108px;
     transform: rotate(-30deg);
     width: 321px;
@@ -15,7 +15,7 @@
         "../img/tickets-background.webp" 1x,
         "../img/tickets-background.png" 1x,
         "../img/tickets-background@2x.webp" 2x,
-        "../img/tickets-background@2x.jpg" 2x
+        "../img/tickets-background@2x.png" 2x
       );
 
     @include vp-1199 {
@@ -81,7 +81,7 @@
     left: 50%;
     transform: translateX(-50%);
     top: 58px;
-    width: 350px;
+    width: 340px;
     height: 2px;
     background: $color-grey;
 
@@ -117,6 +117,7 @@
 
     @include vp-767 {
       display: inline-flex;
+      vertical-align: baseline;
       flex: auto;
       font-size: 16px;
       margin: 0;
@@ -181,7 +182,7 @@
 
 .tickets__card {
   margin: 0;
-  padding: 56px clamp(10px, $tickets-card-padding-desktop, 68px) 60px;
+  padding: 56px clamp(10px, $tickets-card-padding-desktop, 71px) 62px;
   background-color: $color-default-white;
   box-sizing: border-box;
   border: 7px solid transparent;
@@ -238,42 +239,28 @@
 
   span {
     position: relative;
-    color: $color-sapphire;
+    color: $color-egyptian-blue;
     font-weight: 700;
-    font-size: 58px;
+    font-size: 60px;
     line-height: 150%;
-    margin: 0 0 0 6px;
+    margin: 0 0 0 5px;
+    z-index: 0;
 
     @include vp-767 {
       font-size: 48px;
-    }
-
-    &::after {
-      content: attr(data-price);
-      font-weight: 700;
-      font-size: 60px;
-      line-height: 150%;
-      position: relative;
-      color: $color-egyptian-blue;
-      left: -4px;
-      top: 0;
-
-      @include vp-767 {
-        font-size: 48px;
-        left: 0;
-      }
     }
 
     &::before {
       content: attr(data-price);
       position: absolute;
       bottom: -15px;
-      left: -25px;
+      left: -21px;
       font-weight: 700;
       font-size: 100px;
       line-height: 150%;
       color: $color-whisper;
       opacity: 0.48;
+      z-index: -1;
 
       @include vp-767 {
         font-size: 80px;
@@ -281,13 +268,19 @@
         left: -17px;
       }
     }
+
+    & + span {
+      color: $color-sapphire;
+      margin: 0 0 0 9px;
+    }
   }
+
 
   a {
     width: 100%;
     justify-content: center;
-    margin-top: 34px;
-    padding: 26px 0;
+    margin-top: 36px;
+    padding: 24px 0;
     color: $color-sapphire;
     border: none;
     outline: 2px solid $color-sapphire;

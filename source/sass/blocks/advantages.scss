@@ -252,7 +252,7 @@
     font-size: 16px;
     line-height: 140%;
 
-    @include vp-1199 {
+    @include vp-767 {
       text-align: center;
     }
   }

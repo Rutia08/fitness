@@ -1,0 +1,306 @@
+.tickets {
+  background: $color-ghost-white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -95px;
+    right: -108px;
+    transform: rotate(-30deg);
+    width: 321px;
+    height: 384px;
+    background-image:
+      image-set(
+        "../img/tickets-background.webp" 1x,
+        "../img/tickets-background.png" 1x,
+        "../img/tickets-background@2x.webp" 2x,
+        "../img/tickets-background@2x.png" 2x
+      );
+
+    @include vp-1199 {
+      width: 289px;
+      height: 345px;
+      bottom: -75px;
+      right: -9px;
+      background-size: 289px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.tickets__wrapper {
+  padding: 120px clamp(20px, $padding-desktop, 103px);
+  margin: 0 auto;
+  max-width: 1366px;
+  position: relative;
+  text-align: center;
+  color: $color-sapphire;
+
+  @include vp-1199 {
+    padding: 101px clamp(10px, $padding-tablet, 45px) 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    padding: 64px clamp(15px, $padding-mobile, 30px) 70px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-family: $font-alumni-sans-serif;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      margin-right: 10px;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.tickets__tabs {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 58px;
+    width: 340px;
+    height: 2px;
+    background: $color-grey;
+
+    @include vp-1199 {
+      width: 330px;
+    }
+
+    @include vp-767 {
+      width: 290px;
+    }
+  }
+
+  input {
+    @include visually-hidden;
+  }
+
+  label {
+    position: relative;
+    display: inline-block;
+    padding: 17px 0 13px;
+    margin: 0 21px;
+    cursor: pointer;
+    color: rgba(16, 38, 84, 0.5);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      font-size: 18px;
+      padding: 20px 0 13px;
+      margin: 0 25px;
+    }
+
+    @include vp-767 {
+      display: inline-flex;
+      vertical-align: baseline;
+      flex: auto;
+      font-size: 16px;
+      margin: 0;
+      padding: 20px 0 16px;
+
+      &:nth-child(4n) {
+        margin: 0 42px;
+      }
+    }
+  }
+
+  input:checked + label {
+    color: $color-sapphire;
+  }
+
+  label:hover,
+  input:focus + label {
+    color: $color-torch-red;
+  }
+
+  input:focus + label::after,
+  input:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 2;
+    background: $color-crimson;
+  }
+}
+
+.tickets__panels {
+  margin: 38px 0 0 0;
+
+  @include vp-1199 {
+    margin: 44px 0 0 0;
+  }
+
+  @include vp-767 {
+    margin: 33px 0 0 0;
+  }
+}
+
+.tickets__panel {
+  margin: 0;
+  display: none;
+  grid-template-columns: repeat(3, $tickets-card-width-desktop);
+  gap: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    margin: 0 118px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    gap: 35px;
+  }
+}
+
+.tickets__card {
+  margin: 0;
+  padding: 56px clamp(10px, $tickets-card-padding-desktop, 71px) 62px;
+  background-color: $color-default-white;
+  box-sizing: border-box;
+  border: 7px solid transparent;
+
+  @include vp-1199 {
+    padding: 56px 112px 62px;
+    grid-template-columns: 1fr;
+  }
+
+  @include vp-767 {
+    padding: 44px 36px 49px;
+  }
+
+  &:hover,
+  &:focus-within {
+    border-image: linear-gradient(148.82deg, $color-crimson 0.85%, $color-smalt 100%);
+    border-image-slice: 1;
+
+    a {
+      background: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
+      outline: none;
+      color: $color-default-white;
+    }
+  }
+
+  h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-family: $font-roboto-sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 29px;
+    color: $color-sapphire;
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+
+  p {
+    margin: 0 0 65px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-chambray;
+    text-align: center;
+
+    @include vp-767 {
+      margin: 0 0 54px 0;
+    }
+  }
+
+  span {
+    position: relative;
+    color: $color-egyptian-blue;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 150%;
+    margin: 0 0 0 5px;
+    z-index: 0;
+
+    @include vp-767 {
+      font-size: 48px;
+    }
+
+    &::before {
+      content: attr(data-price);
+      position: absolute;
+      bottom: -15px;
+      left: -21px;
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 150%;
+      color: $color-whisper;
+      opacity: 0.48;
+      z-index: -1;
+
+      @include vp-767 {
+        font-size: 80px;
+        bottom: -10px;
+        left: -17px;
+      }
+    }
+
+    & + span {
+      color: $color-sapphire;
+      margin: 0 0 0 9px;
+    }
+  }
+
+
+  a {
+    width: 100%;
+    justify-content: center;
+    margin-top: 36px;
+    padding: 24px 0;
+    color: $color-sapphire;
+    border: none;
+    outline: 2px solid $color-sapphire;
+
+    @include vp-1199 {
+      margin-top: 36px;
+      padding: 26px 0 22px;
+    }
+
+    @include vp-767 {
+      margin-top: 31px;
+      padding: 25px 0 23px;
+    }
+  }
+}
+
+// tabs logic
+[data-input-1]:checked ~ .tickets__panels > [data-panel-1],
+[data-input-2]:checked ~ .tickets__panels > [data-panel-2],
+[data-input-3]:checked ~ .tickets__panels > [data-panel-3],
+[data-input-4]:checked ~ .tickets__panels > [data-panel-4] {
+  display: grid;
+}

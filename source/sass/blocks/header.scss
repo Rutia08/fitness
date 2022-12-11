@@ -1,0 +1,213 @@
+.header {
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, $color-venetian-red -46.69deg, $color-dark-cerulean 32.24deg, $color-venetian-red 313.31deg, $color-dark-cerulean 392.24deg);
+
+  @include vp-1199 {
+    background: conic-gradient(from 139.4deg at 20.7% 35.74%, $color-venetian-red -46.69deg, $color-dark-cerulean 32.24deg, $color-venetian-red 313.31deg, $color-dark-cerulean 392.24deg);
+  }
+
+  @include vp-767 {
+    background: conic-gradient(from 171.43deg at 35.31% 34.22%, $color-venetian-red -46.69deg, $color-dark-cerulean 32.24deg, $color-venetian-red 313.31deg, $color-dark-cerulean 392.24deg);
+  }
+}
+
+.header__wrapper {
+  padding: 30px clamp(30px, $padding-desktop, 103px) 51px;
+  margin: 0 auto;
+  max-width: 1366px;
+
+  @include vp-1199 {
+    padding: 34px clamp(10px, $padding-tablet, 45px) 82px;
+  }
+
+  @include vp-767 {
+    padding: 15px clamp(15px, $padding-mobile, 30px) 79px;
+  }
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+
+  a {
+    color: $color-default-white;
+    font-family: $font-alumni-sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+
+    &:hover {
+      color: $color-sapphire;
+    }
+
+    @include vp-1199 {
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.02em;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+.header__logo {
+  margin-top: 10px;
+
+  @include vp-1199 {
+    margin-top: 5px;
+    width: 82px;
+    height: 17px;
+  }
+
+  @include vp-767 {
+    margin-top: 5px;
+    width: 67px;
+    height: 13px;
+  }
+}
+
+.header__promo {
+  margin: -12px 0 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 397px $header-picture-width-desktop;
+  gap: 63px;
+
+  @include vp-1199 {
+    margin: 19px 0 0 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.header__text {
+  padding: 111px 0 0 19px;
+  color: $color-default-white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include vp-1199 {
+    padding: 49px 0 0 0;
+  }
+
+  p {
+    text-align: right;
+    margin: 0;
+    padding: 0 51px 15px 0;
+    font-family: $font-alumni-sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      font-size: 34px;
+      line-height: 41px;
+      padding: 0 3px 8px 0;
+    }
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 34px;
+      padding: 0 3px 14px 0;
+    }
+  }
+
+  a {
+    display: block;
+    margin: 0;
+    padding: 20px 55px 19px;
+    text-align: center;
+
+    @include vp-1199 {
+      padding: 20px 30px 19px;
+    }
+
+    @include vp-767 {
+      margin: 0 auto;
+      width: 100%;
+
+      max-width: 450px;
+    }
+  }
+}
+
+.header__text-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 265px;
+  margin-bottom: 48px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr 210px;
+    margin-bottom: 36px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr $header-text-wrapper-width-mobile;
+    margin-bottom: 23px;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0 1px 0 0;
+    font-family: $font-alumni-sans-serif;
+    font-weight: 600;
+    font-size: 92px;
+    line-height: 110px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    -webkit-text-stroke: 3px $color-default-white;
+    text-transform: uppercase;
+
+    @include vp-1199 {
+      font-size: 72px;
+      line-height: 86px;
+      text-transform: none;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 36px 0;
+    align-self: flex-end;
+
+    @include vp-1199 {
+      margin: 0 0 20px 0;
+    }
+
+    @include vp-767 {
+      align-self: flex-start;
+      margin: 78px -13px 0 0;
+    }
+  }
+
+  li {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: right;
+  }
+}
+
+.header__picture {
+  @include vp-1199 {
+    img {
+      aspect-ratio: 324/390;
+    }
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}

@@ -1,0 +1,268 @@
+.couches__wrapper {
+  padding: 53px clamp(20px, $padding-desktop-1, 47px) 91px;
+  margin: 0 auto;
+  max-width: 1366px;
+  position: relative;
+
+  @include vp-1199 {
+    padding: 48px clamp(10px, $padding-tablet, 45px) 100px;
+  }
+
+  @include vp-767 {
+    padding: 29px clamp(15px, $padding-mobile, 30px) 70px;
+  }
+
+  h2 {
+    margin: 0 58px 48px;
+    padding: 0;
+    font-family: $font-alumni-sans-serif;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+    color: $color-sapphire;
+
+    @include vp-1199 {
+      text-align: center;
+      font-size: 42px;
+      line-height: 50px;
+      margin: 0 0 31px 0;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+      margin: 0 0 42px 0;
+    }
+  }
+}
+
+.couches__slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.couches__slide {
+  aspect-ratio: 260/294;
+  color: $color-default-white;
+  padding: 22px;
+  background-color: $color-spindle;
+  display: flex;
+  align-items: flex-end;
+
+  @include vp-1199 {
+    aspect-ratio: 268 / 294;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226 / 274;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  .couches__text {
+    width: 100%;
+  }
+
+  .couches__text-hidden {
+    @include visually-hidden;
+  }
+
+  p {
+    padding: 0;
+    margin: -4px 0 33px 0;
+    color: $color-spindle;
+    text-align: center;
+  }
+
+  ul {
+    padding: 0 0 0 36px;
+  }
+
+  li {
+    margin-bottom: 13px;
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $color-default-white;
+      position: absolute;
+      top: 7px;
+      left: -16px;
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    padding: 52px 36px 15px 35px;
+    box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+
+    @include vp-767 {
+      padding: 42px 14px 15px;
+    }
+
+    img {
+      transform: scale(-1, 1);
+    }
+
+    .couches__text {
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .couches__picture::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $color-blue-transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    .couches__text-hidden {
+      @include visually-hidden-off;
+    }
+  }
+}
+
+.couches__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    @include vp-1199 {
+      aspect-ratio: 268 / 294;
+    }
+  }
+}
+
+.couches__text {
+  position: relative;
+  z-index: 2;
+}
+
+.couches__button {
+  padding: 8px;
+  position: relative;
+  width: 16px;
+  height: 32px;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  background: none;
+  display: block;
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    width: 22px;
+    height: 1px;
+    position: absolute;
+    background-color: $color-dark-gray;
+    left: -3px;
+
+    @include vp-767 {
+      width: 13px;
+      left: -2px;
+    }
+  }
+
+  &::before {
+    top: 23px;
+    transform: rotate(45deg);
+
+    @include vp-767 {
+      top: 13px;
+    }
+  }
+
+  &::after {
+    top: 8px;
+    transform: rotate(-45deg);
+
+    @include vp-767 {
+      top: 5px;
+    }
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $color-midnight-express;
+    }
+  }
+
+  &--prev {
+    margin-right: 40px;
+
+    @include vp-767 {
+      margin-right: 16px;
+    }
+  }
+
+  &--next {
+    margin-left: 40px;
+    transform: rotate(180deg);
+
+    @include vp-767 {
+      margin-left: 16px;
+    }
+  }
+}
+
+[data-couches].nojs {
+  .couches__slider {
+    display: block;
+  }
+
+  .couches__swiper-1 {
+    margin: 0;
+  }
+
+  .couches__swiper-1-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+    @include vp-1199 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  button {
+    display: none;
+  }
+}

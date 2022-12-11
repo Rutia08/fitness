@@ -1,0 +1,212 @@
+.gym__wrapper {
+  padding: 120px clamp(20px, $padding-desktop, 103px);
+  margin: 0 auto;
+  max-width: 1366px;
+  display: grid;
+  grid-template-columns: 415px 1fr;
+  gap: $gym-gap;
+
+  @include vp-1199 {
+    padding: 101px clamp(10px, $padding-tablet, 45px) 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    padding: 64px 0 70px;
+  }
+}
+
+.gym__text {
+  padding: 39px 0 0 60px;
+  color: $color-sapphire;
+
+  @include vp-1199 {
+    padding: 0;
+  }
+
+  @include vp-767 {
+    padding: 0 clamp(15px, $padding-mobile, 30px) 0;
+  }
+
+  h2 {
+    margin: 0 0 7px 0;
+    padding: 0;
+    font-family: $font-alumni-sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      margin: 0 16px 0 0;
+      text-align: center;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      text-align: left;
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 5px;
+    }
+  }
+
+  h3 {
+    margin: 0 0 39px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      margin: 0 0 33px 0;
+      text-align: center;
+      font-size: 18px;
+      line-height: 150%;
+    }
+
+    @include vp-767 {
+      margin: 0 0 24px 0;
+      text-align: left;
+    }
+  }
+
+  p {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      margin: 0 0 43px 0;
+      padding: 0 88px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 150%;
+
+      & ~ p {
+        display: none;
+      }
+    }
+
+    @include vp-767 {
+      margin: 0 0 33px 0;
+      padding: 0 30px 0 0;
+      text-align: left;
+    }
+  }
+}
+
+.gym__media {
+  position: relative;
+}
+
+.gym__picture {
+  img {
+    @include vp-1199 {
+      aspect-ratio: 678 / 345;
+      width: 100%;
+    }
+
+    @include vp-767 {
+      aspect-ratio: 320 / 313;
+      width: 100%;
+    }
+  }
+
+  @include vp-767 {
+    margin: 0 0 40px 0;
+  }
+}
+
+.gym__video {
+  margin: -113px 0 0 -63px;
+  width: $gym-video-width-desktop;
+  aspect-ratio: 364/228;
+  position: relative;
+
+  @include vp-1199 {
+    margin: -84px auto 0;
+    width: $gym-video-width-tablet;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    aspect-ratio: 320 / 167;
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus-within {
+    button {
+      background: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
+    }
+
+    a::after {
+      background-color: rgba(122, 20, 91, 0.5);
+    }
+  }
+
+  a {
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(20, 54, 122, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  img {
+    position: relative;
+    width: 100%;
+
+    @include vp-1199 {
+      aspect-ratio: 266/167;
+    }
+
+    @include vp-767 {
+      aspect-ratio: 320 / 167;
+    }
+  }
+
+  button {
+    display: block;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    @include vp-1199 {
+      width: 73px;
+      height: 73px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}

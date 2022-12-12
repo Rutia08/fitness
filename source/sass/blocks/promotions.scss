@@ -31,7 +31,7 @@
     @include vp-767 {
       font-size: 32px;
       line-height: 38px;
-      margin: 0 10px 42px 0;
+      margin: 0 10px 43px 0;
     }
   }
 }
@@ -78,6 +78,8 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 136%;
+    display: grid;
+    width: min-content;
 
     @include vp-767 {
       text-align: center;
@@ -92,7 +94,7 @@
 
   h3 {
     padding: 0;
-    margin: 21px 0 0 0;
+    margin: 24px 0 0 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
@@ -101,7 +103,7 @@
 
     @include vp-767 {
       text-align: center;
-      margin: 16px 0 32px 0;
+      margin: 19px 0 32px 0;
     }
   }
 

@@ -63,7 +63,7 @@
 .promotions__text {
   background-color: $color-torch-red;
   color: $color-default-white;
-  padding: 34px 45px 45px;
+  padding: 36px 45px 45px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -72,27 +72,27 @@
     align-items: center;
   }
 
-  h3 {
+  p {
     padding: 0;
     margin: 0;
     font-weight: 700;
     font-size: 28px;
-    line-height: 156%;
-  }
-
-  p {
-    padding: 0;
-    margin: -6px 0 19px 0;
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 100%;
+    line-height: 136%;
 
     @include vp-767 {
-      margin: -6px 0 14px 0;
+      text-align: center;
     }
   }
 
   span {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 90%;
+  }
+
+  h3 {
+    padding: 0;
+    margin: 21px 0 0 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
@@ -101,7 +101,7 @@
 
     @include vp-767 {
       text-align: center;
-      margin-bottom: 32px;
+      margin: 16px 0 32px 0;
     }
   }
 

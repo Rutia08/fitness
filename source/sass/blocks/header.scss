@@ -92,9 +92,19 @@
 .header__text {
   padding: 111px 0 0 19px;
   color: $color-default-white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 265px;
+  grid-template-rows: min-content 1fr min-content;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr $header-text-width-tablet;
+    column-gap: 20px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr $header-text-wrapper-width-mobile;
+    column-gap: 0;
+  }
 
   @include vp-1199 {
     padding: 49px 0 0 0;
@@ -103,17 +113,19 @@
   p {
     text-align: right;
     margin: 0;
-    padding: 0 51px 15px 0;
+    padding: 0 51px 0 0;
     font-family: $font-alumni-sans-serif;
     font-weight: 600;
     font-size: 48px;
     line-height: 58px;
     letter-spacing: 0.03em;
+    text-transform: lowercase;
+    grid-column: 1 / -1;
 
     @include vp-1199 {
       font-size: 34px;
       line-height: 41px;
-      padding: 0 3px 8px 0;
+      padding: 0 3px 0 0;
     }
 
     @include vp-767 {
@@ -125,20 +137,68 @@
 
   a {
     display: block;
-    margin: 0;
-    padding: 20px 55px 19px;
+    margin: 0 0 43px auto;
+    box-sizing: border-box;
+    padding: 20px 55px;
     text-align: center;
+    grid-column: 1 / -1;
 
     @include vp-1199 {
-      padding: 20px 30px 19px;
+      padding: 20px 30px;
+      margin: 0 0 22px auto;
     }
 
     @include vp-767 {
-      margin: 0 auto;
+      margin: 22px auto 0;
       width: 100%;
-
-      max-width: 450px;
     }
+  }
+
+  h1 {
+    margin: 15px 0 0 0;
+    padding: 0;
+    font-family: $font-alumni-sans-serif;
+    font-weight: 600;
+    font-size: 92px;
+    line-height: 110px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    -webkit-text-stroke: 3px $color-default-white;
+    text-transform: uppercase;
+
+    @include vp-1199 {
+      margin: 8px 0 0 0;
+      font-size: 72px;
+      line-height: 86px;
+      text-transform: none;
+    }
+
+    @include vp-767 {
+      margin: 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 83px 0;
+    align-self: flex-end;
+
+    @include vp-1199 {
+      margin: 0 0 57px 0;
+    }
+
+    @include vp-767 {
+      align-self: flex-start;
+      margin: 78px -13px 0 0;
+    }
+  }
+
+  li {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: right;
   }
 }
 
@@ -155,48 +215,6 @@
   @include vp-767 {
     grid-template-columns: 1fr $header-text-wrapper-width-mobile;
     margin-bottom: 23px;
-  }
-
-  h1 {
-    margin: 0;
-    padding: 0 1px 0 0;
-    font-family: $font-alumni-sans-serif;
-    font-weight: 600;
-    font-size: 92px;
-    line-height: 110px;
-    text-align: right;
-    letter-spacing: 0.05em;
-    -webkit-text-stroke: 3px $color-default-white;
-    text-transform: uppercase;
-
-    @include vp-1199 {
-      font-size: 72px;
-      line-height: 86px;
-      text-transform: none;
-    }
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0 0 36px 0;
-    align-self: flex-end;
-
-    @include vp-1199 {
-      margin: 0 0 20px 0;
-    }
-
-    @include vp-767 {
-      align-self: flex-start;
-      margin: 78px -13px 0 0;
-    }
-  }
-
-  li {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 150%;
-    text-align: right;
   }
 }
 

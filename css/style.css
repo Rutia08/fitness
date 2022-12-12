@@ -2513,7 +2513,7 @@ button,
 }
 
 .advantages__item:first-child h3 {
-  margin: -2px 0 38px 0;
+  margin: -9px 0 38px 0;
   padding: 0;
   font-size: 26px;
   line-height: 100%;
@@ -2555,18 +2555,18 @@ button,
   left: 0;
 }
 
-.advantages__value p {
-  margin: 0 0 -6px 0;
+.advantages__item p {
+  margin: 0;
   padding: 0;
   font-weight: 700;
   font-size: 71px;
   line-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: -webkit-min-content;
+  -ms-grid-rows: min-content;
+  grid-template-rows: -webkit-min-content;
+  grid-template-rows: min-content;
   background: -o-linear-gradient(322.39deg, #d10a42 0%, #003eb7 45.58%);
   background: linear-gradient(127.61deg, #d10a42 0%, #003eb7 45.58%);
   -webkit-background-clip: text;
@@ -2574,12 +2574,12 @@ button,
   color: transparent;
 }
 
-.advantages__value span {
+.advantages__item span {
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   color: #2e35ac;
-  margin-top: 5px;
+  margin-top: -3px;
 }
 
 .advantages__description h3 {
@@ -2596,6 +2596,8 @@ button,
   font-weight: 300;
   font-size: 16px;
   line-height: 140%;
+  color: #102654;
+  background: none;
 }
 
 .promotions__wrapper {
@@ -2653,6 +2655,11 @@ button,
   font-weight: 700;
   font-size: 28px;
   line-height: 136%;
+  display: -ms-grid;
+  display: grid;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .promotions__text span {
@@ -2663,7 +2670,7 @@ button,
 
 .promotions__text h3 {
   padding: 0;
-  margin: 21px 0 0 0;
+  margin: 24px 0 0 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
@@ -3616,7 +3623,7 @@ button,
   }
 
   .advantages__item:first-child h3 {
-    margin: -8px 0 20px;
+    margin: -14px 0 20px;
     line-height: 100%;
     font-size: 22px;
   }
@@ -3625,13 +3632,17 @@ button,
     display: none;
   }
 
-  .advantages__value p {
+  .advantages__item p {
     font-size: 58px;
   }
 
   .advantages__description h3 {
     font-size: 20px;
     margin: 0 0 2px 0;
+  }
+
+  .advantages__description p {
+    font-size: 16px;
   }
 
   .promotions__wrapper {
@@ -4087,29 +4098,24 @@ button,
     grid-row: 3/4;
     width: 100%;
     padding: 19px 34px 41px;
-    margin: 5px 0 11px 0;
+    margin: 8px 0 11px 0;
   }
 
   .advantages__item:first-child h3 {
-    margin: -20px 0 15px;
+    margin: -22px 0 15px;
   }
 
-  .advantages__value {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: 0 20px;
+  .advantages__item p {
+    font-size: 58px;
+    margin: 0 auto;
   }
 
-  .advantages__value span {
+  .advantages__item span {
     margin-top: 0;
+  }
+
+  .advantages__item span {
+    margin: -3px auto 0;
   }
 
   .advantages__description {
@@ -4123,11 +4129,12 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin: 9px 40px 0;
+    margin: 5px 40px 0;
   }
 
   .advantages__description p {
     text-align: center;
+    font-size: 16px;
   }
 
   .promotions__wrapper {
@@ -4137,7 +4144,7 @@ button,
   .promotions__wrapper h2 {
     font-size: 32px;
     line-height: 38px;
-    margin: 0 10px 42px 0;
+    margin: 0 10px 43px 0;
   }
 
   .promotions__promo {
@@ -4157,7 +4164,7 @@ button,
 
   .promotions__text h3 {
     text-align: center;
-    margin: 16px 0 32px 0;
+    margin: 19px 0 32px 0;
   }
 
   .promotions__picture img {
@@ -4181,7 +4188,7 @@ button,
   }
 
   .reviews__wrapper {
-    padding: 31px clamp(15px, 4.6875%, 30px) 71px;
+    padding: 31px clamp(15px, 4.6875%, 30px) 70px;
   }
 
   .reviews__wrapper h2 {

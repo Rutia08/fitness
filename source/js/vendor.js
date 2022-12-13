@@ -70,7 +70,7 @@ swiperNext1.addEventListener('click', () => {
 });
 
 const slidesDuplicate = document.querySelectorAll('.swiper-slide-duplicate');
-slidesDuplicate.forEach(el => {
+slidesDuplicate.forEach((el) => {
   el.removeAttribute('tabindex');
 });
 
@@ -86,15 +86,15 @@ const swiper2 = new Swiper('.swiper-2', {
 
 const disable = (el) => {
   el.classList.add('disabled');
-  el.setAttribute('disabled','');
-  el.setAttribute('tabindex','-1');
-}
+  el.setAttribute('disabled', '');
+  el.setAttribute('tabindex', '-1');
+};
 
 const enable = (el) => {
   el.classList.remove('disabled');
   el.removeAttribute('disabled');
   el.removeAttribute('tabindex');
-}
+};
 
 disable(swiperPrev2);
 

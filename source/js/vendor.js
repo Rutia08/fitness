@@ -69,6 +69,11 @@ swiperNext1.addEventListener('click', () => {
   swiper1.slideNext();
 });
 
+const slidesDuplicate = document.querySelectorAll('.swiper-slide-duplicate');
+slidesDuplicate.forEach(el => {
+  el.removeAttribute('tabindex');
+});
+
 // swiper reviews
 const swiperPrev2 = document.querySelector('[data-swiper-2-prev]');
 const swiperNext2 = document.querySelector('[data-swiper-2-next]');
@@ -79,40 +84,44 @@ const swiper2 = new Swiper('.swiper-2', {
   slidesPerView: 1,
 });
 
-if (swiper2.realIndex === 0) {
-  swiperPrev2.classList.add('disabled');
+const disable = (el) => {
+  el.classList.add('disabled');
+  el.setAttribute('disabled','');
+  el.setAttribute('tabindex','-1');
 }
 
-const buttonDisable2 = () => {
+const enable = (el) => {
+  el.classList.remove('disabled');
+  el.removeAttribute('disabled');
+  el.removeAttribute('tabindex');
+}
+
+disable(swiperPrev2);
+
+const buttonChanger = () => {
   if (swiper2.realIndex === 0) {
-    swiperPrev2.classList.add('disabled');
+    disable(swiperPrev2);
   } else {
-    swiperPrev2.classList.remove('disabled');
+    enable(swiperPrev2);
   }
 
   if ((swiper2.realIndex >= slides2.length / 2)) {
-    swiperNext2.classList.add('disabled');
+    disable(swiperNext2);
   } else {
-    swiperNext2.classList.remove('disabled');
+    enable(swiperNext2);
   }
 };
 
 swiper2.on('transitionEnd', () => {
-  buttonDisable2();
+  buttonChanger();
 });
 
 swiperPrev2.addEventListener('click', () => {
   swiper2.slidePrev();
-  buttonDisable2();
+  buttonChanger();
 });
 
 swiperNext2.addEventListener('click', () => {
   swiper2.slideNext();
-  buttonDisable2();
-});
-
-const slidesDuplicate = document.querySelectorAll('.swiper-slide-duplicate');
-
-slidesDuplicate.forEach(el => {
-  el.removeAttribute('tabindex');
+  buttonChanger();
 });

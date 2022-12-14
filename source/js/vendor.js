@@ -118,10 +118,8 @@ swiper2.on('transitionEnd', () => {
 
 swiperPrev2.addEventListener('click', () => {
   swiper2.slidePrev();
-  buttonChanger();
 });
 
 swiperNext2.addEventListener('click', () => {
   swiper2.slideNext();
-  buttonChanger();
 });

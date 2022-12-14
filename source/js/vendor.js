@@ -75,6 +75,7 @@ slidesDuplicate.forEach((el) => {
 });
 
 // swiper reviews
+
 const swiperPrev2 = document.querySelector('[data-swiper-2-prev]');
 const swiperNext2 = document.querySelector('[data-swiper-2-next]');
 const slides2 = document.querySelectorAll('[data-slide-swiper-2]');

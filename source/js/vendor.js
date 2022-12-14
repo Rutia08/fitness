@@ -96,8 +96,6 @@ const enable = (el) => {
   el.removeAttribute('tabindex');
 };
 
-disable(swiperPrev2);
-
 const buttonChanger = () => {
   if (swiper2.realIndex === 0) {
     disable(swiperPrev2);
@@ -105,12 +103,14 @@ const buttonChanger = () => {
     enable(swiperPrev2);
   }
 
-  if ((swiper2.realIndex >= slides2.length / 2)) {
+  if (swiper2.realIndex === (slides2.length - 1)) {
     disable(swiperNext2);
   } else {
     enable(swiperNext2);
   }
 };
+
+buttonChanger();
 
 swiper2.on('transitionEnd', () => {
   buttonChanger();

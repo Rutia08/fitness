@@ -1638,10 +1638,10 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 265px;
   grid-template-columns: 1fr 265px;
-  -ms-grid-rows: -webkit-min-content 1fr -webkit-min-content;
-  -ms-grid-rows: min-content 1fr min-content;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
-  grid-template-rows: min-content 1fr min-content;
+  -ms-grid-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+  -ms-grid-rows: min-content min-content min-content;
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content min-content;
 }
 
 .header__text p {
@@ -2745,7 +2745,7 @@ button,
 }
 
 .promotions__item p {
-  padding: 0;
+  padding: 0 0 20px 0;
   margin: 0;
   font-weight: 400;
   font-size: 16px;

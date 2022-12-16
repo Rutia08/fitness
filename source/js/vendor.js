@@ -82,6 +82,7 @@ const slides2 = document.querySelectorAll('[data-slide-swiper-2]');
 
 const swiper2 = new Swiper('.swiper-2', {
   direction: 'horizontal',
+  autoHeight: true,
   slidesPerView: 1,
 });
 

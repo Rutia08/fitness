@@ -94,7 +94,7 @@
   color: $color-default-white;
   display: grid;
   grid-template-columns: 1fr 265px;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-rows: min-content min-content min-content;
 
   @include vp-1199 {
     grid-template-columns: 1fr $header-text-width-tablet;
